@@ -1,0 +1,40 @@
+# Agent 2: SEO Keyword/Trend Scanner
+# Schedule: Every 3 hours via LaunchAgent
+# Output: /logs/seo/trend-report-YYYY-MM-DD.md
+
+## Purpose
+Track trending GTA 6 search terms, identify content gaps, and recommend high-value topics.
+
+## Data Sources
+- Google Trends (GTA 6 related queries)
+- Reddit trending posts in r/GTA6, r/GTA, r/gaming
+- YouTube search suggestions and trending
+- "People Also Ask" scraping for GTA 6 queries
+- Google Search Console data (once connected)
+
+## Output Format
+Generate /logs/seo/trend-report-YYYY-MM-DD.md with:
+
+### Trending Keywords
+| Keyword | Volume Trend | Competition | Our Coverage | Action |
+|---------|-------------|-------------|--------------|--------|
+
+### Recommended Topics (2-3 per day)
+For each recommendation:
+- Suggested title (SEO-optimized)
+- Target keyword cluster
+- Content angle / unique hook
+- Estimated search volume trend
+- Competitor coverage assessment
+- Recommended content pillar (news/leaks/deep-dive/guides/opinion)
+
+### Content Gap Analysis
+- Keywords competitors rank for that we don't cover
+- Rising queries with no quality content available
+- Long-tail opportunities
+
+## Rules
+- Focus on keywords with rising trends, not declining
+- Prioritize topics where we can offer unique analysis
+- Track our ranking improvements over time
+- Flag seasonal opportunities (game release windows, events)

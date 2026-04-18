@@ -1,0 +1,171 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-background: #0F0F0F;
+  --color-foreground: #EDEDED;
+  --color-vice-pink: #FF1493;
+  --color-vice-teal: #00CED1;
+  --color-vice-dark: #0F0F0F;
+  --color-vice-darker: #0A0A0A;
+  --color-vice-card: #1A1A2E;
+  --color-vice-card-hover: #222240;
+  --color-vice-muted: #8B8B8B;
+  --color-vice-border: #2A2A3E;
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+}
+
+/* Neon glow effects */
+.neon-pink {
+  text-shadow: 0 0 7px #FF1493, 0 0 10px #FF1493, 0 0 21px #FF1493, 0 0 42px #FF1493;
+}
+
+.neon-teal {
+  text-shadow: 0 0 7px #00CED1, 0 0 10px #00CED1, 0 0 21px #00CED1;
+}
+
+.glow-border-pink {
+  box-shadow: 0 0 5px rgba(255, 20, 147, 0.3), inset 0 0 5px rgba(255, 20, 147, 0.1);
+}
+
+.glow-border-teal {
+  box-shadow: 0 0 5px rgba(0, 206, 209, 0.3), inset 0 0 5px rgba(0, 206, 209, 0.1);
+}
+
+/* Gradient text utility */
+.gradient-text {
+  background: linear-gradient(135deg, #FF1493, #00CED1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0F0F0F;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2A2A3E;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #FF1493;
+}
+
+/* Selection styling */
+::selection {
+  background: rgba(255, 20, 147, 0.3);
+  color: #fff;
+}
+
+/* Prose styling for MDX content */
+.prose {
+  --tw-prose-body: #EDEDED;
+  --tw-prose-headings: #FFFFFF;
+  --tw-prose-links: #00CED1;
+  --tw-prose-bold: #FFFFFF;
+  --tw-prose-code: #FF1493;
+  --tw-prose-quotes: #8B8B8B;
+  --tw-prose-quote-borders: #FF1493;
+  color: #EDEDED;
+  max-width: 72ch;
+  line-height: 1.8;
+}
+
+.prose h1, .prose h2, .prose h3, .prose h4 {
+  color: #FFFFFF;
+  font-weight: 700;
+}
+
+.prose h2 {
+  margin-top: 2em;
+  margin-bottom: 0.75em;
+  font-size: 1.5em;
+  border-bottom: 1px solid #2A2A3E;
+  padding-bottom: 0.5em;
+}
+
+.prose h3 {
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+  font-size: 1.25em;
+}
+
+.prose p {
+  margin-bottom: 1.25em;
+}
+
+.prose a {
+  color: #00CED1;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: color 0.2s;
+}
+
+.prose a:hover {
+  color: #FF1493;
+}
+
+.prose blockquote {
+  border-left: 3px solid #FF1493;
+  padding-left: 1em;
+  color: #8B8B8B;
+  font-style: italic;
+}
+
+.prose code {
+  color: #FF1493;
+  background: rgba(255, 20, 147, 0.1);
+  padding: 0.15em 0.4em;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+
+.prose pre {
+  background: #1A1A2E;
+  border: 1px solid #2A2A3E;
+  border-radius: 8px;
+  padding: 1em;
+  overflow-x: auto;
+}
+
+.prose pre code {
+  background: transparent;
+  padding: 0;
+  color: #EDEDED;
+}
+
+.prose ul, .prose ol {
+  padding-left: 1.5em;
+  margin-bottom: 1.25em;
+}
+
+.prose li {
+  margin-bottom: 0.5em;
+}
+
+.prose img {
+  border-radius: 8px;
+  border: 1px solid #2A2A3E;
+}
+
+.prose strong {
+  color: #FFFFFF;
+}
+
+.prose hr {
+  border-color: #2A2A3E;
+  margin: 2em 0;
+}

@@ -1,0 +1,44 @@
+# Agent 5: Community Pulse Monitor
+# Schedule: Every 6 hours via LaunchAgent
+# Output: /logs/community/pulse-YYYY-MM-DD.md
+
+## Purpose
+Track community sentiment, trending discussions, fan theories, and engagement
+patterns to inform editorial decisions.
+
+## Sources
+- Reddit r/GTA6 (top 10 posts, hot posts, rising)
+- Reddit r/GTA, r/gaming, r/Games (GTA 6 mentions)
+- Twitter/X trending hashtags related to GTA 6
+- YouTube comments on major GTA 6 videos
+- Discord servers (GTAForums, major fan servers)
+- GTA Forums (gtaforums.com)
+
+## Output Format
+Generate /logs/community/pulse-YYYY-MM-DD.md with:
+
+### Top Community Discussions
+1. [Title] — [Platform] — [Engagement metrics] — [Summary]
+(repeat for top 10)
+
+### Trending Fan Theories
+- Theory name, evidence cited, community reception
+
+### Controversy / Hot Takes
+- What's stirring debate and why
+
+### Sentiment Snapshot
+- Overall hype level (1-10)
+- Key sentiment drivers (positive/negative)
+- Notable shifts from previous pulse
+
+### Editorial Recommendations
+- Topics the community wants covered
+- Questions that need answering
+- Debate topics ripe for opinion pieces
+
+## Rules
+- Report facts about community sentiment, don't editorialize
+- Track engagement metrics (upvotes, comments, shares)
+- Flag potential misinformation spreading in community
+- Note when community sentiment conflicts with official info

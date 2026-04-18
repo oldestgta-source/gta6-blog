@@ -1,0 +1,45 @@
+# Agent 6: Competitor Monitor
+# Schedule: Daily at 7 AM via LaunchAgent
+# Output: /logs/competitive/report-YYYY-MM-DD.md
+
+## Purpose
+Track competitor sites covering GTA 6, identify content gaps, and find opportunities
+to differentiate our coverage.
+
+## Competitors to Track
+- gtabase.com
+- gtaboom.com
+- gta6news.com
+- screenrant.com/tag/gta-6
+- gamerant.com/tag/gta-6
+- kotaku.com (GTA coverage)
+- eurogamer.net (GTA coverage)
+- ign.com (GTA coverage)
+
+## Output Format
+Generate /logs/competitive/report-YYYY-MM-DD.md with:
+
+### New Articles Published (Last 24h)
+| Site | Title | Category | Est. Engagement | Our Coverage? |
+|------|-------|----------|-----------------|---------------|
+
+### Content Gap Analysis
+- Topics competitors cover that we haven't
+- Angles competitors missed that we could own
+- Keyword opportunities they're ranking for
+
+### Engagement Analysis
+- Which competitor articles are getting most traction
+- What formats/angles are working best
+- Social sharing patterns
+
+### Differentiation Opportunities
+- Where our depth of analysis can win
+- Topics where surface-level coverage dominates (we go deeper)
+- Community questions competitors aren't answering
+
+## Rules
+- Focus on actionable insights, not just reporting
+- Identify patterns in what performs well across competitors
+- Track publishing frequency and content mix
+- Note any exclusive scoops or unique angles

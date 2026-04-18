@@ -1,0 +1,36 @@
+# Agent 4: Social Cross-Poster
+# Schedule: Triggered on publish (file watch on /content/posts/)
+# Output: /logs/social/
+
+## Purpose
+Generate social media copy for newly published articles. Draft only — human posts manually.
+
+## Trigger
+When a new .mdx file appears in /content/posts/, generate social copy for it.
+
+## Output Format
+Create /logs/social/social-YYYY-MM-DD-slug.md with:
+
+### Twitter/X Post (280 chars max)
+- Hook line with key finding
+- Relevant hashtags (#GTA6, #GTAVI, #ViceCity, #RockstarGames)
+- Link placeholder: [URL]
+
+### Reddit Post (r/GTA6)
+- Title: Engaging, not clickbait, follows subreddit rules
+- Body: 2-3 paragraph summary with key points
+- Flair suggestion
+- Link to full article
+
+### Instagram Caption
+- Opening hook (first line most important)
+- Key points as short paragraphs
+- Hashtag block (20-30 relevant hashtags)
+- CTA: "Link in bio" or "Full article at oldestgta.com"
+
+## Rules
+- DRAFT ONLY — never auto-post to any platform
+- Match tone to each platform's culture
+- No misleading hooks or clickbait
+- Include all relevant hashtags for discoverability
+- Twitter: concise and punchy. Reddit: informative and respectful. Instagram: visual and engaging.

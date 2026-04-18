@@ -1,0 +1,47 @@
+# Agent 8: Image Manager
+# Schedule: Runs as part of Agent 3 (Article Drafter) workflow
+# Output: Updates /logs/image-log.csv, images to /public/images/posts/
+
+## Purpose
+Manage all blog images — ensure uniqueness, optimize file sizes, and maintain
+the image log. Part of the Article Drafter workflow.
+
+## Core Rules
+1. NEVER reuse images across posts
+2. Every image must be logged in /logs/image-log.csv
+3. All images must be < 200KB after compression
+4. Every image needs descriptive alt text
+
+## Image Log Format (/logs/image-log.csv)
+filename,post_slug,alt_text,source,date_added,file_size_kb
+
+## Workflow
+1. Before using any image, check image-log.csv for duplicates
+2. Download/generate unique image for the article
+3. Compress to < 200KB (use sharp, imagemin, or similar)
+4. Save to /public/images/posts/[descriptive-filename].jpg
+5. Add entry to image-log.csv
+6. Return image path and alt text to Article Drafter
+
+## Image Naming Convention
+/public/images/posts/[post-slug]-[descriptor].jpg
+Example: gta6-map-analysis-overhead-view.jpg
+
+## Quality Standards
+- Minimum resolution: 1200x630 (OG image compatible)
+- Format: WebP preferred, JPG fallback
+- Compression: balanced quality, always < 200KB
+- Alt text: descriptive, includes relevant keywords naturally
+
+## Verification
+Before any article is drafted:
+- Cross-reference all image filenames against image-log.csv
+- Verify file exists in /public/images/posts/
+- Verify file size < 200KB
+- Confirm alt text is present and descriptive
+
+## Rules
+- NEVER skip the duplicate check
+- NEVER exceed 200KB per image
+- Log EVERY image, no exceptions
+- If an image source is unclear, flag it for human review

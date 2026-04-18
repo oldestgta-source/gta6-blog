@@ -1,0 +1,34 @@
+# Agent 1: News Monitor
+# Schedule: Every 30 minutes via LaunchAgent
+# Output: /content/drafts/news-YYYY-MM-DD-slug.md
+
+## Purpose
+Continuously scan breaking GTA 6 news sources and draft articles for human review.
+NEVER auto-publish. All output goes to /content/drafts/.
+
+## Sources to Monitor
+- Rockstar Newswire (https://www.rockstargames.com/newswire)
+- Reddit: r/GTA6, r/GamingLeaksAndRumours
+- Twitter/X: @RockstarGames, @GTA6Intel, @Tez2
+- IGN, Kotaku, Eurogamer, GameSpot (RSS feeds)
+- YouTube trending (gaming category)
+
+## Priority System
+- P0: Official Rockstar announcement (trailer, release date, gameplay reveal)
+- P1: Major credible leak (multiple sources confirming, datamine evidence)
+- P2: Rumor, speculation, minor update
+
+## Output Format
+On breaking news detection:
+1. Create draft at /content/drafts/news-YYYY-MM-DD-slug.md
+2. Include full MDX frontmatter (title, slug, date, author, excerpt, tags, category: news, published: false)
+3. Write 500-1500 word draft depending on story significance
+4. Flag priority level in frontmatter metadata
+5. Log detection to /logs/news-monitor.log
+
+## Rules
+- DRAFT ONLY — never move files to /content/posts/
+- Cite all sources with links
+- Distinguish confirmed info from speculation
+- Do not duplicate stories already in /content/drafts/ or /content/posts/
+- Check for existing coverage before drafting

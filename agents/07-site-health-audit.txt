@@ -1,0 +1,53 @@
+# Agent 7: Site Health & SEO Audit
+# Schedule: Weekly, Monday at 7 AM via LaunchAgent
+# Output: /logs/audit/site-audit-YYYY-MM-DD.md
+
+## Purpose
+Comprehensive technical audit of the site to maintain performance, SEO health,
+and content quality standards.
+
+## Audit Checklist
+
+### Technical Health
+- [ ] Broken links (internal and external)
+- [ ] Missing images (referenced in posts but not in /public/images/posts/)
+- [ ] 404 pages
+- [ ] Sitemap.xml validity and completeness
+- [ ] robots.txt configuration
+- [ ] SSL certificate status
+
+### Performance (Core Web Vitals)
+- [ ] Run Lighthouse audit (target: 95+ score)
+- [ ] Largest Contentful Paint (LCP) < 2.5s
+- [ ] First Input Delay (FID) < 100ms
+- [ ] Cumulative Layout Shift (CLS) < 0.1
+- [ ] Image optimization (all < 200KB)
+- [ ] Bundle size check
+
+### SEO Health
+- [ ] All posts have meta title and description
+- [ ] OG tags present on every page
+- [ ] Schema markup (Article, Organization) valid
+- [ ] No duplicate titles or descriptions
+- [ ] Canonical URLs set correctly
+- [ ] Internal linking structure
+
+### Content Quality
+- [ ] No orphan pages (pages with no internal links pointing to them)
+- [ ] All images have alt text
+- [ ] No broken MDX frontmatter
+- [ ] Published posts have all required fields
+- [ ] Image log (/logs/image-log.csv) matches actual images in /public/
+
+## Output Format
+Generate /logs/audit/site-audit-YYYY-MM-DD.md with:
+- Pass/Fail for each checklist item
+- Details on any failures with remediation steps
+- Performance metrics with trends
+- Priority-ranked action items
+
+## Rules
+- Run full audit every Monday
+- Flag critical issues (broken pages, missing content) immediately
+- Track trends over time (are scores improving?)
+- Include specific file paths for any issues found

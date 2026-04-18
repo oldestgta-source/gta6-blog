@@ -1,0 +1,110 @@
+import type { Metadata } from 'next';
+import type { PostFrontmatter } from './posts';
+
+const SITE_URL = 'https://oldestgta.com';
+const SITE_NAME = 'GTA 6 Blog | Vice City Intel';
+const DEFAULT_DESCRIPTION = 'Your source for GTA 6 news, leaks, deep dives, and guides. Vice City coverage from an informed fan who does their homework.';
+
+export function generateSiteMetadata(): Metadata {
+  return {
+    title: {
+      default: SITE_NAME,
+      template: `%s | ${SITE_NAME}`,
+    },
+    description: DEFAULT_DESCRIPTION,
+    metadataBase: new URL(SITE_URL),
+    openGraph: {
+      type: 'website',
+      locale: 'en_US',
+      url: SITE_URL,
+      siteName: SITE_NAME,
+      title: SITE_NAME,
+      description: DEFAULT_DESCRIPTION,
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: SITE_NAME,
+      description: DEFAULT_DESCRIPTION,
+    },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-video-preview': -1,
+        'max-image-preview': 'large',
+        'max-snippet': -1,
+      },
+    },
+  };
+}
+
+export function generatePostMetadata(frontmatter: PostFrontmatter): Metadata {
+  const url = `${SITE_URL}/posts/${frontmatter.slug}`;
+
+  return {
+    title: frontmatter.title,
+    description: frontmatter.excerpt,
+    openGraph: {
+      type: 'article',
+      url,
+      title: frontmatter.title,
+      description: frontmatter.excerpt,
+      publishedTime: frontmatter.date,
+      authors: [frontmatter.author],
+      tags: frontmatter.tags,
+      images: frontmatter.image
+        ? [
+            {
+              url: `${SITE_URL}${frontmatter.image}`,
+              width: 1200,
+              height: 630,
+              alt: frontmatter.imageAlt,
+            },
+          ]
+        : [],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: frontmatter.title,
+      description: frontmatter.excerpt,
+      images: frontmatter.image ? [`${SITE_URL}${frontmatter.image}`] : [],
+    },
+  };
+}
+
+export function generateCategoryMetadata(category: string): Metadata {
+  const title = `${category.charAt(0).toUpperCase() + category.slice(1).replace(/-/g, ' ')} — GTA 6`;
+  const description = `Browse all GTA 6 ${category.replace(/-/g, ' ')} articles, analysis, and coverage.`;
+
+  return {
+    title,
+    description,
+    openGraph: {
+      title,
+      description,
+      url: `${SITE_URL}/category/${category}`,
+    },
+  };
+}
+
+export function generateArticleSchema(frontmatter: PostFrontmatter) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: frontmatter.title,
+    description: frontmatter.excerpt,
+    image: frontmatter.image ? `${SITE_URL}${frontmatter.image}` : undefined,
+    datePublished: frontmatter.date,
+    author: {
+      '@type': 'Person',
+      name: frontmatter.author,
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: SITE_NAME,
+      url: SITE_URL,
+    },
+  };
+}
