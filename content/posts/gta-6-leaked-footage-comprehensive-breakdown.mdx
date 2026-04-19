@@ -1,0 +1,542 @@
+---
+title: "The Complete GTA 6 Leak Breakdown — Every Detail From the September 2022 Footage"
+slug: gta-6-leaked-footage-comprehensive-breakdown
+date: 2026-04-18
+author: Vice City Intel
+excerpt: "A comprehensive thread covering every confirmed detail from the massive September 2022 GTA 6 leak — 90 video clips, characters, weapons, mechanics, vehicles, locations, maps, development builds, and every subsequent leak that followed."
+tags: [gta-6, leaks, september-2022, footage, characters, gameplay, vehicles, locations, maps, vice-city, leonida]
+category: leaks
+image: /images/posts/gta6-leaks-comprehensive-thread.jpg
+imageAlt: "GTA 6 leaked footage collage showing Vice City environments and gameplay"
+readTime: 45
+published: true
+---
+
+This is a comprehensive thread documenting every detail uncovered from the GTA VI leaks. The information below is sourced from **The GTA VI Document (v1.6)**, compiled by the extended mapping and r/GTA6 Discord communities as well as GTAForums. This thread is structured as an evolving reference — not speculation, but a catalogued breakdown of what was actually found in the leaked footage and code.
+
+*To be clear: the leaks were a terrible thing that should never have happened. We stand with the Rockstar employees who were most affected. Still, the community dissected every frame, and this is the result.*
+
+---
+
+## What Was Leaked on September 18, 2022
+
+The original September 18 leak consisted of:
+
+- **90 video clips** spanning from under 10 seconds to over 3 minutes, with recording dates from March 2021 to September 2022
+- **2 PDF screenshots** related to camera controls and build previews for developers, from "Camera-Americas-v6"
+- **Python code** related to the game menu (see the Python Leak section below)
+- **"GameHeaders_Tasks" C++ code** containing information about various game AI tasks, with references to GTA V features
+- **Vehicle handling data** from GTA V's source code
+
+---
+
+## RAGE Engine Notes
+
+The leaked footage reveals several technical details about the game engine:
+
+Tweaked Euphoria physics can be seen when enemies fall or the player jumps and ragdolls. The lighting and skybox systems from Red Dead Redemption 2 are present, including volumetric clouds. Heavy fog appears in one clip where Lucia is in a shootout with police — far thicker than anything in GTA V, with visibility reduced to just a few meters ahead.
+
+Some clips use low-detail character models labeled "low_int." Character labels in the debug are numbered based on story stage. Every world event has a set of rules the player must fulfill for it to trigger, including conditions like "isPlayableCharacter" (PlayerLucia or PlayerJason) and "isWantedRule." Green dots on the right side of each world event indicate which conditions are met.
+
+---
+
+## Characters
+
+### Protagonists
+
+**Lucia** — One of the two protagonists. The "Bonnie" of the Bonnie & Clyde story structure reported by Jason Schreier. Possibly a hacker, based on the tools she carries (Tracker Jammer, Immobilizer Bypass, USB Drive, Auto Dialer). Her height is 5'3" (160cm).
+
+**Jason** — The other protagonist. The "Clyde" of the story. In a confirmed relationship with Lucia, as evidenced by the diner clip. His height is 6'1" (185cm).
+
+Debug code confirms the protagonist structure:
+- `PLAYER_LUCIA_PLAYER_STORY000_00`
+- `PLAYER_JASON_PLAYER_STORY000_01`
+
+### Supporting Characters
+
+**Dre** — Friend of Boobie. He introduces Jason and Lucia to Boobie. According to him, he got in touch with a couple of artists. Has a friend named Sam who is seen having problems with his partner at the club.
+
+**Billy Tit** — A close friend of Dre and a DJ at the nightclub. On thin ice after insulting Dre for not bringing his drinks. Dre tells him "this is why no one likes him" and considers firing him.
+
+**Kai** — New contact.
+
+**Wyman** — Character connected to car parts collectibles. Has a rant event and initial meeting event in the world events list.
+
+**RB Shaw** — New contact.
+
+**Zach** — Unknown role.
+
+### Mentioned Characters
+
+Danny (associated with a "Limit Before/Post Blackmail" event), Iris (connected to Iris Laundry and art fence introductions), Chester (Chester's Music/Chester Fee Before/Post Blackmail), Dale (Dale's Shopwell), Vicky (has phone calls, watching events), Shanese (chat event), and Boobie.
+
+### Universe & Lore
+
+Jay Norris from GTA V is mentioned in one of the clips (Americas 2022-09-06 17-13-34), confirming GTA VI is set in the same HD Universe.
+
+---
+
+## Gangs
+
+Three gang factions have been identified:
+
+**San 4 San** — A Haitian gang. They have a hood with a drug house, gas station, and thrift store in Little Haiti. Events reference their territory extensively.
+
+**Guardia Brothers** — They have a hideout in North Vice City.
+
+**Far Right Militia** — Referenced in the event list with a progression: Far Right Militia Training → Trucks Only → Final Visit, plus a Survival Compound First Visit. It's unknown if they'll be an active gang or a group you encounter while exploring, similar to the Klan in RDR2. Trailer 1 confirmed gangs are marked in green in the event data.
+
+---
+
+## Items and Tools
+
+The leaks reveal a wide range of items the player can carry:
+
+**Hacking/Theft Tools:** Auto Dialer (automatic calls for fraud/technical purposes), Immobilizer Bypass (hacking luxury vehicle immobilizers by matching codes on a PDA, similar to GTA: Chinatown Wars), Slim Jim (for unlocking older car doors — can't open newer cars with internal defenses), Tracker Jammer (prevents GPS tracking devices from receiving/transmitting signals, possibly used to evade police), USB Drive, Cut Off Tool, Crowbar.
+
+**Recovery Items:** Painkillers, Trauma Kits, Food and Drink.
+
+**Weapons as Tools:** Pool Cue, Golf Driver, Golf Putter, Golf Iron, Golf Wedge.
+
+**Loot Items:** Duffle Bag, Backpack.
+
+**Other:** Binoculars, Torch/Flashlight, Cigarettes.
+
+---
+
+## Weapons
+
+The confirmed weapon list includes:
+
+**Explosive/Heavy:** Rocket Launcher, Heavy Machine Gun.
+
+**Rifles:** Assault Rifle (M16/AK47 variants), Auto Rifle (Carbine).
+
+**Sniper:** Hunter Sniper, Bolt Action Sniper.
+
+**SMGs:** Compact SMG, Micro SMG.
+
+**Shotgun:** Pump Action Shotgun.
+
+**Pistol:** Polymer Pistol.
+
+**Melee:** Baseball Bat, Knife.
+
+**Throwables:** Molotov/Fire Bottle, Grenade, Flashbang, Smoke.
+
+**Special:** Speargun.
+
+---
+
+## Weapon Wheel Evolution
+
+The weapon wheel went through multiple iterations during development, visible across several clips:
+
+**June 2021 version** — Split into three sections: Weapons, Equipment, and Gear (similar to RDR2's Weapons, Items, and Horse sections). Large weapon capacity.
+
+**September 2021 version** — Nearly identical to the June build.
+
+**January 2022 version** — Significant redesign. Players could hold different weapons in each hand, with an additional quick item inventory at the bottom left for consumables (trauma kits, pills, cigarettes, food). Weapon capacity now limited.
+
+**June 2022 version (latest seen)** — Dual-wielding removed. Quick inventory moved to center left. Weapon capacity still limited. Based on weapon positions, you can carry approximately one assault weapon on your back, one handgun or semi-auto, one or two smaller melee weapons, one or two tools/items, and an empty-hand "unarmed" slot.
+
+A health tip was also spotted: "You are injured. Your health will regenerate slowly, open your Weapon Wheel and use a recovery item to replenish your health faster."
+
+---
+
+## Open World Activities
+
+**Confirmed activities include:** Dice (possibly Jason-exclusive based on event parameters), Golf, Fishing, Races, Scuba Diving.
+
+**Van Shipment robberies** — Delivery van events spawn near industrial areas of Port Gellhorn. Garages in the zone have security camera warning posters, suggesting stealth is required.
+
+**Robberies** — Significantly expanded from GTA V. The Hank's Waffles robbery clip and pawn shop clip suggest robberies are available at many locations including restaurants, pawn shops, cargo containers (possibly Jason-exclusive for containers), gas stations, and more.
+
+**Deliveries** — Events for Port Gellhorn deliveries and pickup warehouse missions exist.
+
+**Vehicle trunk searches** — Events for finding something or nothing in vehicle trunks.
+
+---
+
+## Enterable Buildings
+
+A massive feature of GTA VI is the number of enterable buildings. Debug code from one clip reads: `Interior:157/ss15lok_1_gfa_bespoke Room:1/room-Main` — meaning **at least 157 interiors** were in the game at the time of the leak.
+
+Confirmed enterable locations include: Malibu Club, Pawn Shops, Jack of Hearts Strip Club, Supermarkets, Bars, Restaurants (including Hank's Waffles diner), Apartments, Laundries, Gas Stations, Convenience Stores, Liquor Stores, and many more.
+
+---
+
+## Multiplayer
+
+In one clip's bottom-left corner, the text "PL: 2/32" is visible — indicating **two players in a 30-player lobby** (with two spectator slots, similar to GTA Online and RDO). "SH: PR_RSN1" references the script host, and "GM H: PR_RSN1" references either the session host or game master.
+
+---
+
+## Collectibles
+
+Two collectible types have been identified:
+
+**Wyman Car Parts** — Includes Classique Logo items. These have a circle icon indicating all collectibles and pickable items use a circle indicator. They also have a "DYNAMIC" flag suggesting they can be movable.
+
+**Collectible Hats** — Jason's hats are a collectible category.
+
+---
+
+## Brands
+
+### New Brands
+ARCHEZ, Bump & Grind, Harmon & Fenix, Chacey's, Hank's Waffles, MARCO, Shorefront, Sprunk Light, Vice City Metro Mule, WhatUp!, VCIA (Vice City International Airport), The Rusty Anchor (music venue), Vice City Mambas (football team), Core Software, Delights.
+
+### Rebranded (Updated Logos from GTA V)
+Bite, Snapmatic, Bleeter, E-Cola, Sprunk — all with redesigned logos.
+
+### Returning Brands
+BurgerShot, LifeInvader, Taco Bomb, Horny's Burgers, LTD Gasoline, Pißwasser, CNT, HOBO, Hinterland, Val-De-Grâce, Chepalle, Redwood Cigarettes, Device, Fleeca, Stronzo, Farshtunken, Shark, Limit, Want, Classique.
+
+---
+
+## Animals
+
+**Confirmed:** Snake (Pythons), Seagull, Skunk, Raccoon, Alligator, Boar, Wading Birds, Squirrel, Southern Leopard Frog, Crayfish, Lizard, Pigeons, Opossum.
+
+**Mythical/Special:** Skunk Ape (seen in one clip). On the Grassrivers wildlife placard, there is a silhouette of a bipedal creature — seemingly a werewolf with a question mark. It's unknown whether this is the Skunk Ape or an additional mythical creature.
+
+**Possible (not confirmed):** Horse (debug menu shows INPUT_HORSE_EXIT, though this may be leftover RAGE code from RDR2), Cow (Runway Cow event exists), Deer, Buck.
+
+Trailer 1 confirmed several animals from this list.
+
+---
+
+## New Mechanics
+
+These are mechanics not present in GTA V, some carried over from RDR2, others entirely new:
+
+**Cover and Movement:** Walk while in cover, go prone, switch shoulders while aiming, underfire (covering your face with weapons or bats, works while crouching).
+
+**Loot System:** Jason and Lucia both carry duffle bags. In one clip, Jason opens shipping containers with options for "stash gold" and "stash cash stack," putting items into his duffle bag. Players pick up cash one-by-one rather than instantly.
+
+**Combat:** Grappling during fist fights, downed self-suicide and downed self-revive (option to revive yourself after heavy damage, similar to RDR2 horse revival), ability to drop and pick up weapons.
+
+**Partner System:** Buddy Comms, Buddy Ping, command your partner during robberies (the Hank's Waffles clip shows prompts to "check in with Jason" or "hold for more options," including telling Jason to surrender or follow you). Jason and Lucia can share items between them — shared items tend to be weapons they can't equip, duplicate weapons, and consumables split evenly.
+
+**Eagle Eye System:** Like RDR2's Dead Eye variant — possibly Jason's special ability. Used to highlight items of interest such as jewelry, safes, and security cameras.
+
+**Driving:** Shooting from the car window with free aim (like the GTA San Andreas cheat code, but now a core feature).
+
+**Interaction with Objects and People:** Carry bodies, rob/threaten/talk with NPCs during robberies, pick up items (beer bottles, cans, car parts boxes, hats).
+
+**Weight and Muscle System (Unconfirmed):** Lucia appears thinner in some clips compared to others. Jason appears notably more muscular in the motel pool scene compared to nightclub footage.
+
+---
+
+## New Gameplay Systems
+
+**Money Laundering** — An icon in the Hank's Waffles video tracks to a car wash property: a washing machine with a dollar sign in the center, the universal symbol for money laundering. Properties can apparently be purchased for laundering purposes.
+
+**Fences** — Car Fence and Art Fence are both mentioned in the events list. Iris is connected to an Art Fence introduction event.
+
+**Purchasable Businesses** — Likely linked with the laundering system.
+
+**Vehicle Discovery/Compendium** — When Jason rides a Maibatsu Sanchez, the UI shows the player has found a new livery for it, suggesting a vehicle compendium system.
+
+**Hacking** — Lucia carries hacking tools (Tracker Jammer, Immobilizer Bypass, USB Drive, Auto Dialer), aligning with Tom Henderson's earlier report about a female hacker protagonist.
+
+**Witness System and Police Recognition** — During the Hank's Waffles robbery, text under the wanted level stars reads "Full Description," meaning witnesses have a full description of you. When Lucia enters a police vehicle, it changes from "No Vehicle Description" to "Full Vehicle Description." A tip reads: "Any vehicle you are seen entering will be known by the Law." Jason is seen trying to prevent customers with yellow icons above their heads from calling cops or running away — when a female NPC's icon starts flickering and turns red, she runs.
+
+**Pragmatic Cool/Chaotic & Romantic Cool/Chaotic** — These are mentioned in the events list alongside "Radio Song/Riding Pillion," suggesting a morality or style system.
+
+**Store Banning** — Events show players can get banned from certain stores (Supermarket, Quickshop, Uncle Jack's Liquor) as a consequence of prior actions, similar to RDR2's system where stores become inaccessible after shootouts.
+
+**Tourist to Local Progression** — Events track: Checking out → Experienced Tourist → Full Tourist → Nearly a Local.
+
+---
+
+## New Features
+
+### Improved AI System
+
+**Enemy AI** — Enemies now shoot when you turn your back to them. Police adjust their stance depending on cover height, lower their position when reloading, and keep shooting while moving laterally. Police raise guns over higher objects like cars.
+
+**NPC Behavior** — NPCs no longer walk as single pedestrians but travel and converse in groups (like RDR2). NPCs are seen entering buildings as the player exits. NPCs stand and drink near bars. Some NPCs sit on the ground, with animations like "Sit_Ground_Smoke." NPCs react to events around them — when cops arrive at Hank's Waffles, an NPC says "Jesus, finally." Attacked NPCs run with phones in hand.
+
+**Partner AI** — Lucia follows Dre (not just Jason) in the nightclub, suggesting the AI knows where to go without tracking only the player character. Lucia automatically turns around when shot.
+
+### Police System
+
+A new police system includes "Time Until Cops Dispatch" when committing crimes. At Hank's Waffles, police wait for the player to come out rather than rushing in. Players can **surrender to police** during robberies. There are also **Cop Trap** events at many locations: Alley, Apartment Complex, Bingo, Body Shop, Bulk Storage, Burnout Scooters, Cafe Carraway, Cash n Carry, Closing Store, Food Trucks, Kington Hotel, Massage Parlors.
+
+### CCTV System
+
+A CCTV Detection Meter exists, suggesting security cameras play a role in wanted level and stealth.
+
+### Other Confirmed Features
+
+Ability to restrain NPCs (Lucia uses zipties in the Hank's Waffles clip). Loot vehicles (a prompt reads "Examine - Stranger SUV"). Buy gumballs from gumball machines. Character clothes become dirty. Hair and Facial Hair growth system (Jason appears with varying hair lengths and beard states across clips, suggesting RDR2-style growth or at minimum a deeper barber system). Eating and drinking from inventory (Wine, Soda, and Fruit seen added to inventory at a gas station). Smoking (cigarette icon visible in weapon wheel). Playing without the minimap (on-screen waypoints and map icons suggest this is possible; the minimap appears when Jason gets on a bike). Car GPS/waypoints visible on dashboard in first-person view. Option to enter the passenger seat. Advanced car hijacking (Immobilizer Bypass for luxury cars, Slim Jim for older cars, with events for Steal Car - Full, Steal Car - In Progress, and Steal Car Fail). More detailed car interiors. Improved vehicle damage with realistic part separation and sparks. Vehicle controls via D-PAD (left for vehicle controls, right for quick options). Greet/Antagonize dialogue options (confirmed by a "Sun Lotion (Greet)" event).
+
+---
+
+## Attention to Detail
+
+The leaked footage reveals an extraordinary level of environmental and behavioral detail:
+
+Raccoons rummage through trash cans and steal food bags (three separate world events for this). Light shines through Lucia's ear cartilage via subsurface scattering (carried over from RDR2). Interiors are highly detailed — the Hank's Waffles diner has cups on and behind the counter, knife supports, soda and coffee machines with coffee pots, sinks with ingredient storage, toppings and essences, paper towel holders, waffle makers, cleaning bags, and cups on the floor.
+
+Jason presses the brakes before starting a motorcycle, and his wrist bracelets move independently. Groups take selfies at Ocean Beach. Wind behaves realistically near the shore. Pool chairs at the motel are destroyed and the water is swampy. Scuff marks are visible on carpet in the pawn shop. Water particles float when shot, and lily pads react to waves. Sheriffs in the passenger seat look out their side windows to check for cross traffic. Birds stand on power lines. An under-construction bridge is visible. Cops struggle to stand after being shot, avoiding pressure on injured body parts. Bullets scratch through vehicles creating sparks. Dead leaves accumulate on the ground under trees. The nighttime lighting creates realistic orange tints on roads with bright light spots and accurate reflections. NPCs eat hamburgers. For the first time in a GTA game, stores have two attendants. Lucia physically closes a car door with her hands before opening it. Lucia crawls across a passenger seat to reach the driver's seat.
+
+---
+
+## Audio
+
+### Radio Soundtrack
+
+Songs heard in the leaks are mostly GTA V and Online placeholders, with the exception of "Smoke on the Water" by Deep Purple (not previously featured in the series). The Hank's Waffles robbery uses a Diamond Casino Heist soundtrack with added synths.
+
+Placeholder tracks identified across clips span stations including iFruit, Channel X, The Lab, Blonded LS, LS Rock Radio, Kult FM, Music Locker Radio, and more.
+
+### Sound Design
+
+Weapons sound louder and punchier, more similar to GTA IV than V. Body impacts generate audio events — Lucia bumping into a car while running creates a hit sound (previously you had to attack a vehicle for it to register). Ragdoll impacts produce realistic heavy sounds. Car doors sound more authentic and vary by vehicle. Police sirens echo off scenery realistically. Shipping containers produce accurate reverb when opened. Environmental audio includes seagulls and pedestrian chatter at Vice Beach.
+
+---
+
+## Transportation
+
+**Metromover** — A metromover transit system is visible in one clip, inspired by the Miami Metromover. The Vice City Metro Mule is a new transit brand.
+
+**Horses** — The debug menu shows "INPUT_HORSE_EXIT" alongside "INPUT_VEH_EXIT," though this may be leftover RAGE code from RDR2 rather than a confirmed feature.
+
+---
+
+## Vehicles
+
+### Returning GTA V Vehicles (Subject to Change)
+
+Albany Alpha, Albany Emperor, Albany Primo, Annis Hellion, Benefactor Schafter LWB, Bravado Bison, Bravado Feroci, Bravado Gauntlet Classic, Bravado Rumpo Custom, Bravado Youga, Bravado Youga Classic, Brute Boxville, Brute Camper, Brute Mixer (3-axle), Canis Seminole Frontier, Declasse Burrito, Declasse Granger, Declasse Moonbeam, Declasse Sabre Turbo, Declasse Sheriff SUV, Declasse Tornado, Declasse Granger 3600LX, Dinka Blista Compact, Dundreary Regina, Gallivanter Baller, HVY Mixer, Imponte DF8-90, Karin Futo, Karin Rebel, Karin Sultan, Lampadati Novak, Maibatsu Mule, Maibatsu Sanchez, Nagasaki Street Blazer, Ocelot Locust, Pegassi Toros, Vapid Benson, Vapid Bobcat XL, Vapid Contender, Vapid Minivan, Vapid Police Cruiser, Vapid Sadler, Vapid Slamvan, Vapid Speedo, Vapid Stanier, Vulcar Ingot.
+
+### New Vehicles (Real-World Inspirations)
+
+First batch: Cadillac Deville D'Elegance, Chrysler Lebaron Wagon (80s), Toyota Camry, Excavator, Metromover transit, Hovercraft/Airboat.
+
+Second batch: Chevrolet Sonic Hatchback 2019, Buick Skylark Sedans (or Chevrolet Caprice) from the 90s, Honda Accord 2018-2022 (possibly Dinka Hakumai), Ford Explorer/Tahoe SUV 90s-2000s (possibly Vapid Prospector), Ford Ranger Off-Road 2017 (possibly Vapid Rover), Subaru Forester SUV 2019 (possibly Karin Arechi), Chrysler Sebring Sedans (possibly Kuruma from GTA III), Ford Taurus Emergency (Vapid Interceptor). Also possibly a Bravado Buffalo STX or Maserati Gran Turismo.
+
+### New In-Game Vehicle Names
+
+Declasse Mamba GT, Transgressor, Vapid Riata Classic.
+
+### Special Vehicles
+
+Sand Car (off-road dune buggy for sand dune events) and ATVs (ATV event confirmed).
+
+---
+
+## Locations
+
+### Vice City (Based on Miami)
+
+**Edgewater area** — Jack of Hearts nightclub (multistory, 3+ floors, where Jason and Lucia can be seen).
+
+**North Vice City** — Guardia Hideout, Liquor Store, Minimart.
+
+**Rockridge (Based on Little Havana)** — Bite restaurant, Shorefront Bank, Rockridge Neighborhood Service Center, Vice City Mambas Football Stadium, a river on the minimap (inspired by Miami River), and a power plant behind the Neighborhood Service Center.
+
+**Little Haiti** — San 4 San Hood territory with a Drug House, Gas Station, and Thrift Store.
+
+**Vice Beach** — Marina, Bayside, Stone Sculpture event (possibly inspired by the Ugo Rondinone sculpture on Miami Beach).
+
+**South Beach** — Pier, Cordelia Alley, Shores Alley, Ocean Drive, Ocean View, Boardwalk Hotel, Kington Hotel, Happy Juice, Downtown, Gym, Hotel, ViceYCity Hotel, Washington Beach. A location based on Collins Ave from South Beach.
+
+**Key Biscayne** — Crandon Park Tennis Stadium.
+
+### Port Gellhorn (Based on Panama City)
+
+Car Wash, SCHLOTT, Police Station, PGH Motel, Easy Inn (parody of Paradise Inn Motel), Soccer Field, Construction Site, Strip Club (x2), Quickshop Gas Station, Warehouse, Train Station, Clinic, Beaches, Bingo Hall, Trailer Park, Wastewater Plant, Substation, Abandoned Building, Basketball Court, Pawn Shop (Joyeria Empenos — a real pawnshop in Miami that allows pawning guns and vehicles), Bowling Alley, Strip Mall, Fishing Store, Wilderness, Bocamar Bridge, Residential Area.
+
+### Yorktown (Possibly north of Port Gellhorn)
+Ambrosia, Ambrosia Farm, Ambrosia Tarmac.
+
+### Sundown
+Sundown Beach, Sundown Tarmac.
+
+### Keys
+King Neptune Statue, Yard Sales, Gas Stations, Liquor & Convenience Stores, Boatyard.
+
+### La Perle (Unconfirmed name)
+Laundry, Pawn Shop.
+
+### Redhill
+Construction Site, Forest with River Bend.
+
+### Lake Leonida (Based on Lake Okeechobee)
+Named after Ponce De Leon, the conquistador who "discovered" Florida. Features: Monument of Leonida, LO Motel, LO Prison, LO Racetrack, Hamlet, Off Road Environment.
+
+### Stockyard
+Location based on Homestead area with Burger Shot, Te Invito Restaurant, LTD Gas Station, Treasured Trash.
+
+### Grassrivers (Based on the Everglades)
+Fracking Location, Plane Crash.
+
+### Underwater
+Underwater Ruins, Underwater Research Facility, Whale Graveyard.
+
+### Returning Names from GTA: Vice City
+Leaf Links, Malibu Club, Washington Beach, Ocean Beach, Ocean Drive, Ocean View, Little Haiti, Ekanfinaka.
+
+### Natural Features
+Sugarloaf Mountain, Domed Hills, Canyon Etchings, 4 Rivers, Capo Romano Domed Houses. Hills visible in the north in the Hank's Waffles video and mountains in another clip.
+
+### Abandoned Places
+Abandoned Research Outpost, Abandoned Carnival, Abandoned Hotel, Abandoned Observatory.
+
+### Notable Buildings and Stores
+Roadside Giant Fish Building, Starlet Motel (also in GTA V's East Vinewood, based on the Bates Motel), Squatting Garage, Standing Garage, Spaceship House, Driftwood House, Holiday House, Massage Parlor, Bait and Tackle Shop, Souvenir Store, Uncle Jack's Liquor, Iris Laundry, Iris Restaurant, Sand Bar Stations, Apartment Complex, Bingo Hall, Body Shop, Bulk Storage, Cafe Carraway, Cash n Carry, Treasured Trash, Little Library.
+
+### Real-World References
+St. Joseph Marina Water, Fountain of Youth (possibly based on the Fountain of Youth Archaeological Park in St. Augustine, FL — the oldest attraction in the state), South/North Miami and Everglades, Bermuda Triangle, and Bohemia (referenced in Events, suggesting Port Gellhorn draws from Pensacola as well as Panama City).
+
+### Landmarks and Points of Interest
+Dinosaur World, Fairyland Forest, Rose Interstate, Pet Cemetery, Paper Mill Ruins, Ancient Labyrinth Visitor Center, Air Station, Airfield, Singing Road, Dairy Farm, Cave, Junkyard, Mine Shaft, Toxic Floating Trash Island, Survival Compound, Hunting Shelters, Small Camper Spots, Island Camp, Sand Pyramids, Sand Sphinx, Sniper's Nest, Shooting Death Memorial, Drug Lab Trailer Park, Drug Lab Trailer Small, Drug Lab Apartment, Wastewater Plant, Lean Sizzurp Lab, Backyard Wrestling Ring, Quarry, Canyon Etchings, Lifeguard Tower, Lighthouse, Redneck Yacht Club, Seaview, Shooting Range, Chalk Art, Vice City Monster Sculpture, Sculpted Shrubbery, Sofa Tree Swing, Miami Peacock Statues, Kraken Sculpture, Outdoor Movie Screen.
+
+There are also several references to a "SERA Failed Space Launch," suggesting Cape Canaveral may be part of the map.
+
+The highway visible in the footage is Interstate 97, inspired by Miami's Interstate 95.
+
+---
+
+## GTA VI Maps
+
+Community mappers have produced detailed analysis of the game world based on leaked footage:
+
+**Speculative Landmass** — Community-built map with orange borders (speculative, possibly inaccurate) showing the estimated full extent of the game world.
+
+**Confirmed Locations Map** — Created by community member Fido_le_muet, showing only locations confirmed through leaked footage.
+
+**Real-World Comparison Maps** — Detailed overlays matching leaked footage to real Miami locations, including Ocean Beach (mapped to Shore Park Hotel, Edwards Apts, Hotel Breakwater, Hotel Victor, Art Deco Welcome Center, Edison Hotel, 1500 Ocean Drive, Beach Patrol HQ, Loews Miami Beach Hotel), Edgewater (AmeriCash Pawn Shop, New Arena Apartments, Quantum on the Bay, 1800 Club Condos, Marina Blue Condo, Miami Marriott Biscayne Bay, Bay Parc Apartments, Opera Tower), and Interstate 97 highway (City View Parking Garage, Central Concrete Supermix, Maison Grande Condos, Ritz-Carlton Bal Harbor, Akoya Condos).
+
+The highway passes over a location based on Wynwood (where the S4S hood is in-game). Road signs point north to "North Beaches - Lake Leonida," east to "Washington Beach, Ekanfinaka" (possibly based on Okefenokee Swamp), and west to what may read "Bellville Ekanfinaka."
+
+Key identified real-world matches include: Margaret Pace Park, Biscayne Bay with Venetian Causeway, LoanDepot Park (Vice City Mambas stadium), Miami Airport Station (with both Metromover and VCIA trains visible), Jackson Memorial Building, US District Court, CC Atkins Courthouse, Stephen P. Clark Government Center, St. John Bosco Church (Little Havana), Miami Police Department in Little Havana, King of Diamonds (inspiration for Jack of Hearts nightclub — the real KoD went bankrupt in 2019 and reopened at a new location by taking over a place called Babylon), Solar Amphitheater at Bayfront Park, and Crandon Park Tennis Stadium.
+
+Road signs include "Keys Causeway" pointing south, inspired by the real-world Overseas Highway to Key West.
+
+---
+
+## Development Builds
+
+The leaked footage spans builds from approximately 2019-2020 through September 2023. The version numbering progressed steadily:
+
+The earliest known build is a PDF screenshot at version v270.0 (estimated 2019-2020). From March 2021 (v400.0.17) through September 2022 (v542.0), the version numbers climbed through the 400s and 500s. Development appeared to halt during the 2021-2022 holiday period, with the same v470.0 version appearing on December 17, 2021, and January 11, 2022.
+
+Several testbed demos were recorded on older builds (v504.0 used on May 20, 2022; v510.0 on June 14; v528.0 on August 11; v533.0 on September 13) — these were likely demonstrations or bug reproductions rather than rollbacks.
+
+The latest known build is v636.0, dated September 2023, seen in the December 2023 devkit leak.
+
+---
+
+## PC Specs Used During Development
+
+The development team used a range of hardware configurations for recording test footage, including Intel Xeon and AMD Ryzen Threadripper workstations paired with GPUs ranging from GTX TITAN X and GTX 1080 through RTX 2070 Super, RTX 2080 Super, RTX 3060 Ti, and RTX 3080.
+
+---
+
+## State of the Game
+
+Analysis of video metadata reveals three executable types were used during recording:
+
+- **game_win64_bankrelease.exe** — A debug build aiming to be "feature complete" (core gameplay features all present and playable)
+- **game_win64_beta.exe** — Adds extra functionality, aiming for "content complete" (all game content present but possibly visually unrefined with bugs)
+- **game_win64_debug.exe** — Standard debug build
+
+The progression from bankrelease to beta suggests the game was moving from feature-complete to content-complete status during the September 2022 recording period. For comparison, Final Fantasy XVI announced content-complete status in June 2022 and launched June 2023.
+
+---
+
+## The Python Leak
+
+Leaked alongside the September 2022 footage but largely overlooked: a Python file related to the game's menu system. A comment in the code reads: `#americas is purple background with white text`. The hex color referenced is #800080 (purple), suggesting one of the main color schemes for GTA VI's menu may be purple and white. This Python file was later found in the GTA V source code leak on December 25, 2023.
+
+---
+
+## December 2023 Leaks
+
+Three significant events occurred in December 2023:
+
+### December 2nd Devkit Footage
+A person associated with Aaron Garbut (Rockstar co-studio head) recorded video of GTA VI running on a PS5 devkit in Garbut's home office, showing a brief glimpse of downtown Vice City. Community analysis determined the build was version 636, running in Performance Mode (though this may have been for development only). The footage was actually captured in September 2023.
+
+The individual who recorded it made additional claims about the game that the GTA VI analysis team deemed questionable and invalid, so those claims were not included to avoid spreading misinformation.
+
+### Early Trailer 1 Leak
+The first GTA VI trailer was leaked approximately half a day early by someone who purchased access to the YouTube admin panel, forcing Rockstar to release the trailer ahead of schedule.
+
+### GTA V Source Code Leak
+The complete source code for GTA V was leaked on December 25, 2023, containing minor references to GTA VI:
+
+References found include: various "Americas" source paths (americas/src/dev/...), mentions of codename "Meridian" with a raw Americas mocap path, configuration files for PC/PS5/Xbox Series X/PS4/Xbox One Americas builds, character specifications (172cm regular in-game female, 182cm regular in-game male), animations (Russian Pick Up, Drink_CoffeeCup, LH Sweep Handgun Underwater, Lockpicking, idle, AI Reactions Breakout, Cinematic Lucia Face Clip), vehicles (ZZ_Car_Sedan, Arcturus, Reblagts), weapons (AR Assault Rifle), animals (Bengal Tiger), audio cutscene references (INT_LUCIA_EXT_P3_NEW), and props (Food_Sodacup, BottleLarge).
+
+---
+
+## January 1st, 2025 Leak
+
+After a year of silence from Rockstar, a Reddit user posted 2 videos and a picture from inside Rockstar San Diego. EXIF metadata shows the footage was captured on June 22, 2021, during the COVID-19 pandemic (explaining the empty office as employees worked remotely).
+
+The leak included: one video featuring an Xbox One X devkit labeled "SAND" with the IP range of Rockstar San Diego (matching the GTA V source code), another showing a monitor displaying a Red Dead Redemption 2 loading screen with a debug bar, and an image showing GTA VI footage on a monitor — Lucia in an environment surrounded by trees, Quonset huts, containers, a silage bunker, and construction equipment. Based on the June 2021 date, the build is likely around v420 (matching leaked footage from a similar timeframe).
+
+The exact location is unknown but appears to be an unfinished area with bugs like water caustics appearing on the ground.
+
+---
+
+## Interesting World Events — Full Catalog
+
+The leaked events list reveals hundreds of world events. Here are the most notable categories:
+
+### Random Encounters
+Donut Burnout, Tire Swing, Broken Dawn Car, Parking Dispute, Car Pullover, Shotgun Beers Encounter, Police Siren Abuse, Broken Down Racer, BMX Hangout, Motorsport Hangout, DUI Sobriety Test, Stuck Vehicle - Swamp, Airport Drag, Stunt - 4x4, ATV Speeders, Hop Out Attack, Overly Packed Vehicle Crash, Escape Time Traffic, Everglades Fracking, Coral Farming, Dog Hump Dog, Santeria Sacrifice.
+
+### Criminal Events
+Drug Deals (1, 2, and 3), Cop Raid, Rival Gang Drug Deal, Stuck Up Crew, Warehouse Gang, Kidnapped Victim, High Cashier events at multiple locations (247 South Beach, 247 Supermarket, Dale's Shopwell, Quick Stop, Uncle Jack's), Fleeing Robber, Double Cross, Dirty Cop Shakedown, Prison Hitchhiker, Dealer Robbery, Backseat Criminal, Impulsive Crime (Rob Store, Steal Vehicle).
+
+### Victim Events
+Victims at La Perle (Laundry, Pawn 1, Pawn 2, Jewelry), Keys (Gas Station, Convenience Store), South Beach (Iguana, Happy Juice). Self Injury events at Pier and Seaview. Mugger events. Female Thief, Male Thief, Known Thief encounters. Bangs On Window (Attack Player, Steal Vehicle).
+
+### Side Mission-Style Events
+Farm Monster Man (four-part progression: First Visit → Chemicals Request → Chemicals Delivery → Transform — possibly referencing Marvel's Man-Thing from the Florida Everglades). Dealership Repo #3am missions (Gym, Luxury Good, Ocean Beach). Everyday Art installations across the city (Bench Shadow, Electric Monsters, Elephant, Frog Flies, Helicopter, Koala, Old Guy, Skier, Cookie Grab, Sidewalk Creep, Green Dude, Penguin). Music Video event. Swole Couple Workout Challenge (five meetings). Wyman's Rant and initial meeting. Club Promoter progression. Senior Vigilante missions. Busted Cheater (three-part: Busted → Fight → Just Married). King Fishers Warning, Bird Cage Clue, Lost at Sea.
+
+### In-World Discoveries
+Cars/Trucks in Church, Everglades Plane Crash, Hidden Tide Objects (Anchor, Cannon, Tank, WW2 Plane), Sunken Airboat, SERA Space Launch Capsule, SERA Failed Space Launch Engine/Fairing/Debris, SERA Minivan, Abandoned Boat, Burnt Wreckage, Forest Phone, Shoe Tree, Trains in Forest, Swamp Tour Crash, Zorbing Accident, Dead Paraglider, Car Flattened By Rock, Sniped Victim Apartment, Stalled Boat, Wyman Truck, Cargo Containers, Overpass Idiots (Tough/Scared variants on Highway and Bridge).
+
+### Mystery Events
+Bonnie and Clyde Mystery (Barn Find, Closure, Trophy Room), Missing Tourists (Cave Victims Location, Lifeguard Tower, Junkyard Victim Location, Trailer Victim Location), Missing Person Posters, Submerged Car Victim, King Neptune Underwater Ruins, Mountain Biker Corpse, Register Stone, Partially Submerged Sculptures, Rum Bottle Shipwreck, UFO events, Quarry Car Find.
+
+### Easter Eggs
+Message in a Bottle, Mummified Old Lady, Mine Shaft Discovery, Tires in the Ocean (possibly referencing Florida's Osborne Tire Reef), Forest Figure, Haunted Warehouse, Dancer Mystery and Dancer Mystery Stalker, Warehouse Sex Robots, Lost Plane 2, Lost Plane Memorial, Cell Tower Recorded Calls, Lighthouse Mystery, Sand Sphinx, Voice in the Storm Drain, Unique Tombstone, Big Cat Mansion (likely an IT reference), Big Cat Cage Roof, Giant Clam, Skunk Ape, Scarface Crime Scene, UFO, Giant Bird Nest.
+
+### Social Events
+Lucia's Friends series (Meet At House, Hang Out, Small Favor, Welcome Party, Meet Outside). 3AM Club/Party House events at Malibu Club, Ocean View, and Vice Beach Plaza (with Aftermath, Empty, GangParty, and HouseParty variants). Various NPC animations including Warm Embrace, Chill Kneel, Flex Kneel, Fist Bump, Trendy Stand, and Snapmatic photo poses.
+
+### Overtown
+Gang Directions Crosstown, Getaway Driver events (Nervous Thief and Pro Thief variants), Overtown Safe House, Overtown High Rise — this may be a hood near Downtown with African-American street gangs, and it suggests players can choose their getaway driver based on skill levels (similar to GTA V heist crew selection) and have a safe house in the area.
+
+---
+
+## Other Notable Details
+
+- The game's font is **Neue Helvetica Paneuropean 67 Condensed Medium** (used for subtitles, tips, interaction menus, button prompts)
+- A cop's clothing is based on the Miami Beach PD uniform
+- A cop with a bulletproof helmet exits a car during a Rockridge shootout
+- Ammo clips remain on the ground for a longer time after reloading
+- Stores are not open 24/7 — a "Sorry! WE'RE CLOSED" sign appears on a Quickshop door (this texture also appears in GTA Vice City: The Definitive Edition)
+- Collision boxes exist for chip bags outside stores, suggesting manual food purchasing like RDR2
+- Doors feel physically attached and unlocked/locked, unlike GTA V's floating door feel
+- Only Jason can apparently play dice (based on the isPlayableCharacter event parameter)
+- Lucia can also drive Jason's personal vehicle (seen in the highway chase clip)
+- There are events suggesting the player can be drunk (DrunkBackwardPGFruitStand, DrunkForwardFarPGFruitStand, DrunkSmashPGFruitStand)
+- Overdose events exist (Overdose Horn, Overdose Outside Car, Overdose Sleeping)
+- Walk and Talk events suggest conversational walking mechanics
+- Swamp Safari and Crazy Golf are activity events
+- Off Duty Cop events exist
+- DJ Clipse event at a nightclub
+- POB (Point of Interest Board) objects on South Beach boardwalks where road bikes can be found and stolen
+
+---
+
+*This thread is based on The GTA VI Document v1.6, compiled by the r/GTA6 Discord and GTAForums communities. All information originates from the September 2022 leak footage and subsequent leaks. Rockstar Games has not officially confirmed most of these details. As always, the final game may differ significantly from pre-release development footage.*
