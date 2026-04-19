@@ -206,3 +206,44 @@ body {
   background: linear-gradient(90deg, transparent, #2A2A3E 20%, #2A2A3E 80%, transparent);
   margin: 3em 0;
 }
+
+/* Thread images — native to the site, not PDF screenshots */
+.thread-prose img {
+  border-radius: 12px;
+  border: 1px solid #2A2A3E;
+  margin: 1.5em 0;
+  width: 100%;
+  transition: border-color 0.3s;
+}
+
+.thread-prose img:hover {
+  border-color: rgba(0, 206, 209, 0.4);
+}
+
+/* Thread list items — tighter, more styled */
+.thread-prose li {
+  padding-left: 0.25em;
+}
+
+.thread-prose li strong {
+  color: #00CED1;
+}
+
+/* Thread blockquotes — used as callout boxes */
+.thread-prose blockquote {
+  background: rgba(26, 26, 46, 0.6);
+  border-left: 3px solid #FF1493;
+  border-radius: 0 8px 8px 0;
+  padding: 1em 1.25em;
+  margin: 1.5em 0;
+}
+
+/* Thread code — debug references */
+.thread-prose code {
+  font-size: 0.85em;
+  padding: 0.2em 0.5em;
+  border-radius: 4px;
+  background: rgba(255, 20, 147, 0.08);
+  color: #FF1493;
+  border: 1px solid rgba(255, 20, 147, 0.15);
+}

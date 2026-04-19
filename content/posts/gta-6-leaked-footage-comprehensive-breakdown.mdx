@@ -28,9 +28,6 @@ The original September 18 leak consisted of:
 - **"GameHeaders_Tasks" C++ code** containing information about various game AI tasks, with references to GTA V features
 - **Vehicle handling data** from GTA V's source code
 
-![What was leaked on September 18, 2022 — overview from The GTA VI Document](/images/posts/leaks-thread/what-was-leaked.jpg)
-
-
 ---
 
 ## RAGE Engine Notes
@@ -41,17 +38,11 @@ Tweaked Euphoria physics can be seen when enemies fall or the player jumps and r
 
 Some clips use low-detail character models labeled "low_int." Character labels in the debug are numbered based on story stage. Every world event has a set of rules the player must fulfill for it to trigger, including conditions like "isPlayableCharacter" (PlayerLucia or PlayerJason) and "isWantedRule." Green dots on the right side of each world event indicate which conditions are met.
 
-![RAGE Engine notes — Euphoria physics, volumetric clouds, and world event debug system](/images/posts/leaks-thread/rage-engine.jpg)
-
-
 ---
 
 ## Characters
 
 ### Protagonists
-
-![Characters overview from the leaked footage — Dre, Lucia, Sam, Jason, and supporting cast](/images/posts/leaks-thread/characters.jpg)
-
 
 **Lucia** — One of the two protagonists. The "Bonnie" of the Bonnie & Clyde story structure reported by Jason Schreier. Possibly a hacker, based on the tools she carries (Tracker Jammer, Immobilizer Bypass, USB Drive, Auto Dialer). Her height is 5'3" (160cm).
 
@@ -60,9 +51,6 @@ Some clips use low-detail character models labeled "low_int." Character labels i
 Debug code confirms the protagonist structure:
 - `PLAYER_LUCIA_PLAYER_STORY000_00`
 - `PLAYER_JASON_PLAYER_STORY000_01`
-
-![About the protagonists Jason and Lucia, and the gangs of Vice City](/images/posts/leaks-thread/protagonists-gangs.jpg)
-
 
 ### Supporting Characters
 
@@ -114,9 +102,6 @@ The leaks reveal a wide range of items the player can carry:
 
 **Other:** Binoculars, Torch/Flashlight, Cigarettes.
 
-![Items and tools found in the leaked footage](/images/posts/leaks-thread/items-tools.jpg)
-
-
 ---
 
 ## Weapons
@@ -141,9 +126,6 @@ The confirmed weapon list includes:
 
 **Special:** Speargun.
 
-![Weapons confirmed from the leaked footage](/images/posts/leaks-thread/weapons.jpg)
-
-
 ---
 
 ## Weapon Wheel Evolution
@@ -158,10 +140,11 @@ The weapon wheel went through multiple iterations during development, visible ac
 
 **June 2022 version (latest seen)** — Dual-wielding removed. Quick inventory moved to center left. Weapon capacity still limited. Based on weapon positions, you can carry approximately one assault weapon on your back, one handgun or semi-auto, one or two smaller melee weapons, one or two tools/items, and an empty-hand "unarmed" slot.
 
-A health tip was also spotted: "You are injured. Your health will regenerate slowly, open your Weapon Wheel and use a recovery item to replenish your health faster."
+A health tip was also spotted:
 
-![Weapon wheel evolution across development builds](/images/posts/leaks-thread/weapon-wheel.jpg)
+![Weapon wheel evolution across four development builds — from full arsenal to limited carry system](/images/posts/leaks-thread/diagram-weapon-wheel.jpg)
 
+ "You are injured. Your health will regenerate slowly, open your Weapon Wheel and use a recovery item to replenish your health faster."
 
 ---
 
@@ -177,9 +160,6 @@ A health tip was also spotted: "You are injured. Your health will regenerate slo
 
 **Vehicle trunk searches** — Events for finding something or nothing in vehicle trunks.
 
-![Open world activities — robberies, deliveries, and van shipments](/images/posts/leaks-thread/open-world.jpg)
-
-
 ---
 
 ## Enterable Buildings
@@ -187,9 +167,6 @@ A health tip was also spotted: "You are injured. Your health will regenerate slo
 A massive feature of GTA VI is the number of enterable buildings. Debug code from one clip reads: `Interior:157/ss15lok_1_gfa_bespoke Room:1/room-Main` — meaning **at least 157 interiors** were in the game at the time of the leak.
 
 Confirmed enterable locations include: Malibu Club, Pawn Shops, Jack of Hearts Strip Club, Supermarkets, Bars, Restaurants (including Hank's Waffles diner), Apartments, Laundries, Gas Stations, Convenience Stores, Liquor Stores, and many more.
-
-![Multiplayer and enterable buildings — 157+ interiors confirmed](/images/posts/leaks-thread/multiplayer.jpg)
-
 
 ---
 
@@ -207,9 +184,6 @@ Two collectible types have been identified:
 
 **Collectible Hats** — Jason's hats are a collectible category.
 
-![Collectible hats for Jason found in the leaked footage](/images/posts/leaks-thread/collectibles-hats.jpg)
-
-
 ---
 
 ## Brands
@@ -219,9 +193,6 @@ ARCHEZ, Bump & Grind, Harmon & Fenix, Chacey's, Hank's Waffles, MARCO, Shorefron
 
 ### Rebranded (Updated Logos from GTA V)
 Bite, Snapmatic, Bleeter, E-Cola, Sprunk — all with redesigned logos.
-
-![New and rebranded companies in GTA VI](/images/posts/leaks-thread/brands-new.jpg)
-
 
 ### Returning Brands
 BurgerShot, LifeInvader, Taco Bomb, Horny's Burgers, LTD Gasoline, Pißwasser, CNT, HOBO, Hinterland, Val-De-Grâce, Chepalle, Redwood Cigarettes, Device, Fleeca, Stronzo, Farshtunken, Shark, Limit, Want, Classique.
@@ -237,9 +208,6 @@ BurgerShot, LifeInvader, Taco Bomb, Horny's Burgers, LTD Gasoline, Pißwasser, C
 **Possible (not confirmed):** Horse (debug menu shows INPUT_HORSE_EXIT, though this may be leftover RAGE code from RDR2), Cow (Runway Cow event exists), Deer, Buck.
 
 Trailer 1 confirmed several animals from this list.
-
-![Animals spotted in the leaked footage and confirmed in Trailer 1](/images/posts/leaks-thread/animals.jpg)
-
 
 ---
 
@@ -259,7 +227,6 @@ These are mechanics not present in GTA V, some carried over from RDR2, others en
 
 **Driving:** Shooting from the car window with free aim
 
-![New mechanics — prone, loot bags, partner system, eagle eye](/images/posts/leaks-thread/new-mechanics.jpg)
  (like the GTA San Andreas cheat code, but now a core feature).
 
 **Interaction with Objects and People:** Carry bodies, rob/threaten/talk with NPCs during robberies, pick up items (beer bottles, cans, car parts boxes, hats).
@@ -288,7 +255,6 @@ These are mechanics not present in GTA V, some carried over from RDR2, others en
 
 **Tourist to Local Progression** — Events track: Checking out
 
-![New gameplay systems — money laundering, witness system, hacking](/images/posts/leaks-thread/new-gameplay.jpg)
  → Experienced Tourist → Full Tourist → Nearly a Local.
 
 ---
@@ -303,15 +269,9 @@ These are mechanics not present in GTA V, some carried over from RDR2, others en
 
 **Partner AI** — Lucia follows Dre (not just Jason) in the nightclub, suggesting the AI knows where to go without tracking only the player character. Lucia automatically turns around when shot.
 
-![Improved AI system — enemy, NPC, and partner AI](/images/posts/leaks-thread/new-features-ai.jpg)
-
-
 ### Police System
 
 A new police system includes "Time Until Cops Dispatch" when committing crimes. At Hank's Waffles, police wait for the player to come out rather than rushing in. Players can **surrender to police** during robberies. There are also **Cop Trap** events at many locations: Alley, Apartment Complex, Bingo, Body Shop, Bulk Storage, Burnout Scooters, Cafe Carraway, Cash n Carry, Closing Store, Food Trucks, Kington Hotel, Massage Parlors.
-
-![New police system, CCTV, and other confirmed features](/images/posts/leaks-thread/new-features-police.jpg)
-
 
 ### CCTV System
 
@@ -331,11 +291,6 @@ Raccoons rummage through trash cans and steal food bags (three separate world ev
 
 Jason presses the brakes before starting a motorcycle, and his wrist bracelets move independently. Groups take selfies at Ocean Beach. Wind behaves realistically near the shore. Pool chairs at the motel are destroyed and the water is swampy. Scuff marks are visible on carpet in the pawn shop. Water particles float when shot, and lily pads react to waves. Sheriffs in the passenger seat look out their side windows to check for cross traffic. Birds stand on power lines. An under-construction bridge is visible. Cops struggle to stand after being shot, avoiding pressure on injured body parts. Bullets scratch through vehicles creating sparks. Dead leaves accumulate on the ground under trees. The nighttime lighting creates realistic orange tints on roads with bright light spots and accurate reflections. NPCs eat hamburgers. For the first time in a GTA game, stores have two attendants. Lucia physically closes a car door with her hands before opening it. Lucia crawls across a passenger seat to reach the driver's seat.
 
-![Attention to detail examples from the leaked footage](/images/posts/leaks-thread/attention-detail-1.jpg)
-
-![More attention to detail — lighting, physics, NPC behavior](/images/posts/leaks-thread/attention-detail-2.jpg)
-
-
 ---
 
 ## Audio
@@ -350,9 +305,6 @@ Placeholder tracks identified across clips span stations including iFruit, Chann
 
 Weapons sound louder and punchier, more similar to GTA IV than V. Body impacts generate audio events — Lucia bumping into a car while running creates a hit sound (previously you had to attack a vehicle for it to register). Ragdoll impacts produce realistic heavy sounds. Car doors sound more authentic and vary by vehicle. Police sirens echo off scenery realistically. Shipping containers produce accurate reverb when opened. Environmental audio includes seagulls and pedestrian chatter at Vice Beach.
 
-![Audio details — radio soundtrack and sound design analysis](/images/posts/leaks-thread/audio.jpg)
-
-
 ---
 
 ## Transportation
@@ -360,9 +312,6 @@ Weapons sound louder and punchier, more similar to GTA IV than V. Body impacts g
 **Metromover** — A metromover transit system is visible in one clip, inspired by the Miami Metromover. The Vice City Metro Mule is a new transit brand.
 
 **Horses** — The debug menu shows "INPUT_HORSE_EXIT" alongside "INPUT_VEH_EXIT," though this may be leftover RAGE code from RDR2 rather than a confirmed feature.
-
-![Transportation — Metromover and horse debug references](/images/posts/leaks-thread/transportation.jpg)
-
 
 ---
 
@@ -386,9 +335,6 @@ Declasse Mamba GT, Transgressor, Vapid Riata Classic.
 
 Sand Car (off-road dune buggy for sand dune events) and ATVs (ATV event confirmed).
 
-![Vehicles — returning GTA V cars and new vehicle models](/images/posts/leaks-thread/vehicles.jpg)
-
-
 ---
 
 ## Locations
@@ -409,20 +355,9 @@ Sand Car (off-road dune buggy for sand dune events) and ATVs (ATV event confirme
 
 **Key Biscayne** — Crandon Park Tennis Stadium.
 
-![Solar Amphitheater at Bayfront Park](/images/posts/leaks-thread/map-amphitheater.jpg)
-
-![Crandon Park Tennis Stadium mapping](/images/posts/leaks-thread/map-tennis.jpg)
-
-
-![Locations — Vice City detailed breakdown](/images/posts/leaks-thread/locations-vice-city.jpg)
-
-
 ### Port Gellhorn (Based on Panama City)
 
 Car Wash, SCHLOTT, Police Station, PGH Motel, Easy Inn (parody of Paradise Inn Motel), Soccer Field, Construction Site, Strip Club (x2), Quickshop Gas Station, Warehouse, Train Station, Clinic, Beaches, Bingo Hall, Trailer Park, Wastewater Plant, Substation, Abandoned Building, Basketball Court, Pawn Shop (Joyeria Empenos — a real pawnshop in Miami that allows pawning guns and vehicles), Bowling Alley, Strip Mall, Fishing Store, Wilderness, Bocamar Bridge, Residential Area.
-
-![Locations — Port Gellhorn breakdown](/images/posts/leaks-thread/locations-port-gellhorn.jpg)
-
 
 ### Yorktown (Possibly north of Port Gellhorn)
 Ambrosia, Ambrosia Farm, Ambrosia Tarmac.
@@ -473,18 +408,27 @@ There are also several references to a "SERA Failed Space Launch," suggesting Ca
 
 The highway visible in the footage is Interstate 97, inspired by Miami's Interstate 95.
 
-![Landmarks and points of interest across the map](/images/posts/leaks-thread/locations-landmarks.jpg)
-
-
 ---
 
 ## GTA VI Maps
 
-![Speculative landmass map built by the community](/images/posts/leaks-thread/map-speculative.jpg)
+### Speculative Landmass
 
-![Confirmed locations only — by Fido_le_muet](/images/posts/leaks-thread/map-confirmed.jpg)
+The community built a speculative map of the full game world based on all available leak footage. The orange borders are entirely speculative and may be inaccurate.
 
-![Real-world location comparisons](/images/posts/leaks-thread/map-real-world-1.jpg)
+![Community-built speculative map of the GTA VI game world](/images/posts/leaks-thread/map-speculative.jpg)
+
+### Confirmed Locations Map
+
+Created by community member Fido_le_muet, showing only locations that can be verified from leaked footage.
+
+![Map showing only confirmed locations from leaked footage — by Fido_le_muet](/images/posts/leaks-thread/map-confirmed.jpg)
+
+### Real-World Location Analysis
+
+![Real-world Miami locations identified in leaked footage and trailers](/images/posts/leaks-thread/map-real-world.jpg)
+
+![Keys Causeway road sign analysis — pointing south toward the Keys](/images/posts/leaks-thread/map-keys-causeway.jpg)
 
 
 Community mappers have produced detailed analysis of the game world based on leaked footage:
@@ -495,32 +439,50 @@ Community mappers have produced detailed analysis of the game world based on lea
 
 **Real-World Comparison Maps** — Detailed overlays matching leaked footage to real Miami locations, including Ocean Beach (mapped to Shore Park Hotel, Edwards Apts, Hotel Breakwater, Hotel Victor, Art Deco Welcome Center, Edison Hotel, 1500 Ocean Drive, Beach Patrol HQ, Loews Miami Beach Hotel)
 
-![Ocean Beach — real-world location mapping](/images/posts/leaks-thread/map-ocean-beach.jpg)
+![Ocean Beach location mapping — matching in-game buildings to real Miami Beach landmarks](/images/posts/leaks-thread/map-ocean-beach.jpg)
+
+
 , Edgewater (AmeriCash Pawn Shop, New Arena Apartments, Quantum on the Bay, 1800 Club Condos, Marina Blue Condo, Miami Marriott Biscayne Bay, Bay Parc Apartments, Opera Tower)
 
-![Edgewater — real-world building identification](/images/posts/leaks-thread/map-edgewater.jpg)
+![Edgewater nightclub scene — real-world building identification from leaked footage](/images/posts/leaks-thread/map-edgewater.jpg)
+
+
 , and Interstate 97 highway (City View Parking Garage, Central Concrete Supermix, Maison Grande Condos, Ritz-Carlton Bal Harbor, Akoya Condos).
 
 The highway passes over a location based on Wynwood (where the S4S hood is in-game). Road signs point north to "North Beaches - Lake Leonida," east to "Washington Beach, Ekanfinaka" (possibly based on Okefenokee Swamp), and west to what may read "Bellville Ekanfinaka."
 
-![Highway car crash test video — Interstate 97 analysis](/images/posts/leaks-thread/map-highway.jpg)
+![Interstate 97 highway analysis — building identification and road sign translations](/images/posts/leaks-thread/map-highway.jpg)
 
 
 Key identified real-world matches include: Margaret Pace Park, Biscayne Bay with Venetian Causeway
 
-![Margaret Pace Park and Biscayne Bay identification](/images/posts/leaks-thread/map-margaret-pace.jpg)
+![Margaret Pace Park and Venetian Causeway — Biscayne Bay identification](/images/posts/leaks-thread/map-margaret-pace.jpg)
+
 
 , LoanDepot Park (Vice City Mambas stadium), Miami Airport Station
 
-![LoanDepot Park and Miami Airport Station mapping](/images/posts/leaks-thread/map-loandepot.jpg)
+![LoanDepot Park (Vice City Mambas) and Miami Airport Station](/images/posts/leaks-thread/map-loandepot.jpg)
 
-![Airport station with Metromover and VCIA trains](/images/posts/leaks-thread/map-airport.jpg)
- (with both Metromover and VCIA trains visible), Jackson Memorial Building, US District Court, CC Atkins Courthouse, Stephen P. Clark Government Center, St. John Bosco Church (Little Havana), Miami Police Department in Little Havana, King of Diamonds (inspiration for Jack of Hearts nightclub
+![Airport station interior showing Metromover and VCIA trains](/images/posts/leaks-thread/map-airport.jpg)
 
-![Central Vice City mapping and King of Diamonds comparison](/images/posts/leaks-thread/map-central-vc.jpg)
 
-![King of Diamonds / Jack of Hearts nightclub comparison](/images/posts/leaks-thread/map-nightclub.jpg)
- — the real KoD went bankrupt in 2019 and reopened at a new location by taking over a place called Babylon), Solar Amphitheater at Bayfront Park, and Crandon Park Tennis Stadium.
+ (with both Metromover and VCIA trains visible), Jackson Memorial Building, US District Court, CC Atkins Courthouse, Stephen P. Clark Government Center, St. John Bosco Church (Little Havana)
+
+![Government buildings — Jackson Memorial, courthouse, and St. John Bosco Church](/images/posts/leaks-thread/map-courthouse.jpg)
+, Miami Police Department in Little Havana, King of Diamonds (inspiration for Jack of Hearts nightclub
+
+![Central Vice City police station — Miami PD comparison](/images/posts/leaks-thread/map-central-vc.jpg)
+
+
+ — the real KoD went bankrupt in 2019 and reopened at a new location by taking over a place called Babylon)
+
+![King of Diamonds vs Jack of Hearts nightclub — logo and location comparison](/images/posts/leaks-thread/map-nightclub.jpg)
+, Solar Amphitheater at Bayfront Park, and Crandon Park Tennis Stadium.
+
+![Solar Amphitheater at Bayfront Park — matching palm trees and building silhouettes](/images/posts/leaks-thread/map-amphitheater.jpg)
+
+![Crandon Park Tennis Stadium — real-world comparison](/images/posts/leaks-thread/map-tennis.jpg)
+
 
 Road signs include "Keys Causeway" pointing south, inspired by the real-world Overseas Highway to Key West.
 
@@ -535,9 +497,6 @@ The earliest known build is a PDF screenshot at version v270.0 (estimated 2019-2
 Several testbed demos were recorded on older builds (v504.0 used on May 20, 2022; v510.0 on June 14; v528.0 on August 11; v533.0 on September 13) — these were likely demonstrations or bug reproductions rather than rollbacks.
 
 The latest known build is v636.0, dated September 2023, seen in the December 2023 devkit leak.
-
-![Development build version history from 2019 to 2023](/images/posts/leaks-thread/dev-builds.jpg)
-
 
 ---
 
@@ -563,9 +522,6 @@ The progression from bankrelease to beta suggests the game was moving from featu
 
 Leaked alongside the September 2022 footage but largely overlooked: a Python file related to the game's menu system. A comment in the code reads: `#americas is purple background with white text`. The hex color referenced is #800080 (purple), suggesting one of the main color schemes for GTA VI's menu may be purple and white. This Python file was later found in the GTA V source code leak on December 25, 2023.
 
-![The Python leak — purple and white menu color scheme](/images/posts/leaks-thread/python-leak.jpg)
-
-
 ---
 
 ## December 2023 Leaks
@@ -577,9 +533,9 @@ A person associated with Aaron Garbut (Rockstar co-studio head) recorded video o
 
 The individual who recorded it made additional claims about the game that the GTA VI analysis team deemed questionable and invalid, so those claims were not included to avoid spreading misinformation.
 
-![December 2023 devkit footage leak analysis](/images/posts/leaks-thread/dec2023-leaks-1.jpg)
+![December 2023 PS5 devkit footage showing downtown Vice City](/images/posts/leaks-thread/leak-dec2023-devkit.jpg)
 
-![December 2023 leak — community analysis details](/images/posts/leaks-thread/dec2023-leaks-2.jpg)
+![Community analysis of the December 2nd leak — build version, performance mode, location identification](/images/posts/leaks-thread/leak-dec2023-analysis.jpg)
 
 
 ### Early Trailer 1 Leak
@@ -590,7 +546,7 @@ The complete source code for GTA V was leaked on December 25, 2023, containing m
 
 References found include: various "Americas" source paths (americas/src/dev/...), mentions of codename "Meridian" with a raw Americas mocap path, configuration files for PC/PS5/Xbox Series X/PS4/Xbox One Americas builds, character specifications (172cm regular in-game female, 182cm regular in-game male), animations (Russian Pick Up, Drink_CoffeeCup, LH Sweep Handgun Underwater, Lockpicking, idle, AI Reactions Breakout, Cinematic Lucia Face Clip), vehicles (ZZ_Car_Sedan, Arcturus, Reblagts), weapons (AR Assault Rifle), animals (Bengal Tiger), audio cutscene references (INT_LUCIA_EXT_P3_NEW), and props (Food_Sodacup, BottleLarge).
 
-![GTA VI references found in the GTA V source code](/images/posts/leaks-thread/dec2023-source-code.jpg)
+![GTA VI references discovered in the GTA V source code — characters, animations, vehicles, and assets](/images/posts/leaks-thread/table-source-refs.jpg)
 
 
 ---
@@ -603,14 +559,13 @@ The leak included: one video featuring an Xbox One X devkit labeled "SAND" with 
 
 The exact location is unknown but appears to be an unfinished area with bugs like water caustics appearing on the ground.
 
-![January 1st, 2025 Rockstar San Diego leak](/images/posts/leaks-thread/jan2025-leak.jpg)
+![January 2025 leak from Rockstar San Diego — Xbox devkit and GTA VI footage on monitor](/images/posts/leaks-thread/leak-jan2025.jpg)
 
 
 ---
 
 ## Interesting World Events
 
-![Sample of the hundreds of world events catalogued from the leak](/images/posts/leaks-thread/events-1.jpg)
  — Full Catalog
 
 The leaked events list reveals hundreds of world events. Here are the most notable categories:
@@ -635,9 +590,6 @@ Bonnie and Clyde Mystery (Barn Find, Closure, Trophy Room), Missing Tourists (Ca
 
 ### Easter Eggs
 Message in a Bottle, Mummified Old Lady, Mine Shaft Discovery, Tires in the Ocean (possibly referencing Florida's Osborne Tire Reef), Forest Figure, Haunted Warehouse, Dancer Mystery and Dancer Mystery Stalker, Warehouse Sex Robots, Lost Plane 2, Lost Plane Memorial, Cell Tower Recorded Calls, Lighthouse Mystery, Sand Sphinx, Voice in the Storm Drain, Unique Tombstone, Big Cat Mansion (likely an IT reference), Big Cat Cage Roof, Giant Clam, Skunk Ape, Scarface Crime Scene, UFO, Giant Bird Nest.
-
-![Possible easter eggs from the events list](/images/posts/leaks-thread/events-easter-eggs.jpg)
-
 
 ### Social Events
 Lucia's Friends series (Meet At House, Hang Out, Small Favor, Welcome Party, Meet Outside). 3AM Club/Party House events at Malibu Club, Ocean View, and Vice Beach Plaza (with Aftermath, Empty, GangParty, and HouseParty variants). Various NPC animations including Warm Embrace, Chill Kneel, Flex Kneel, Fist Bump, Trendy Stand, and Snapmatic photo poses.
