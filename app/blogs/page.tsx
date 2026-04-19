@@ -1,11 +1,11 @@
 import { getFeed } from '@/lib/feed';
 import FeedCard from '@/components/FeedCard';
-import { generatePageMeta } from '@/lib/seo';
+import type { Metadata } from 'next';
 
-export const metadata = generatePageMeta({
+export const metadata: Metadata = {
   title: 'GTA 6 Blogs & News | $GTA',
   description: 'Curated GTA 6 news, articles, and analysis from Insider Gaming, GameSpot, Kotaku, GamesRadar, and more — handpicked by the $GTA community.',
-});
+};
 
 export default function BlogsPage() {
   const feed = getFeed();
