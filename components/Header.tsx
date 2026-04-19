@@ -4,13 +4,13 @@ import Link from 'next/link';
 import { useState } from 'react';
 
 const categories = [
-  { name: 'News', slug: 'news' },
-  { name: 'Leaks', slug: 'leaks' },
-  { name: 'Deep Dives', slug: 'deep-dive' },
-  { name: 'Guides', slug: 'guides' },
-  { name: 'Opinion', slug: 'opinion' },
-  { name: 'GTA Online 2', slug: 'gta-online-2' },
-  { name: 'Comparison', slug: 'comparison' },
+  { name: 'News', href: '/category/news' },
+  { name: 'Leaks', href: '/leaks' },
+  { name: 'Deep Dives', href: '/category/deep-dive' },
+  { name: 'Guides', href: '/category/guides' },
+  { name: 'Opinion', href: '/category/opinion' },
+  { name: 'GTA Online 2', href: '/category/gta-online-2' },
+  { name: 'Comparison', href: '/category/comparison' },
 ];
 
 export default function Header() {
@@ -34,8 +34,8 @@ export default function Header() {
           <nav className="hidden md:flex items-center gap-1">
             {categories.map((cat) => (
               <Link
-                key={cat.slug}
-                href={`/category/${cat.slug}`}
+                key={cat.href}
+                href={cat.href}
                 className="px-3 py-2 text-sm text-vice-muted hover:text-vice-teal transition-colors rounded-md hover:bg-vice-card"
               >
                 {cat.name}
@@ -65,8 +65,8 @@ export default function Header() {
             <div className="flex flex-col gap-1">
               {categories.map((cat) => (
                 <Link
-                  key={cat.slug}
-                  href={`/category/${cat.slug}`}
+                  key={cat.href}
+                  href={cat.href}
                   onClick={() => setMobileMenuOpen(false)}
                   className="px-3 py-2 text-sm text-vice-muted hover:text-vice-teal transition-colors rounded-md hover:bg-vice-card"
                 >

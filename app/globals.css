@@ -169,3 +169,40 @@ body {
   border-color: #2A2A3E;
   margin: 2em 0;
 }
+
+/* Thread-specific prose — wider, more spacious for the dedicated leaks page */
+.thread-prose {
+  max-width: 100%;
+}
+
+.thread-prose h2 {
+  font-size: 1.75em;
+  margin-top: 2.5em;
+  padding-bottom: 0.6em;
+  border-bottom: 2px solid #2A2A3E;
+  position: relative;
+}
+
+.thread-prose h2::before {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 60px;
+  height: 2px;
+  background: linear-gradient(90deg, #FF1493, #00CED1);
+}
+
+.thread-prose h3 {
+  font-size: 1.35em;
+  margin-top: 2em;
+  color: #00CED1;
+}
+
+/* Section dividers in thread */
+.thread-prose hr {
+  border: none;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #2A2A3E 20%, #2A2A3E 80%, transparent);
+  margin: 3em 0;
+}

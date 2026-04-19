@@ -1,3 +1,4 @@
+import { redirect } from 'next/navigation';
 import { getPostsByCategory, getAllCategories } from '@/lib/posts';
 import { generateCategoryMetadata } from '@/lib/seo';
 import PostCard from '@/components/PostCard';
@@ -29,6 +30,12 @@ export async function generateMetadata({ params }: CategoryPageProps): Promise<M
 
 export default async function CategoryPage({ params }: CategoryPageProps) {
   const { cat } = await params;
+
+  // Redirect /category/leaks to the dedicated /leaks thread page
+  if (cat === 'leaks') {
+    redirect('/leaks');
+  }
+
   const posts = getPostsByCategory(cat);
   const displayName = cat.charAt(0).toUpperCase() + cat.slice(1).replace(/-/g, ' ');
 
