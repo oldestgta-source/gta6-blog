@@ -7,10 +7,14 @@
   --color-vice-teal: #00CED1;
   --color-vice-dark: #0F0F0F;
   --color-vice-darker: #0A0A0A;
+  --color-vice-deep: #0a0e1a;
+  --color-vice-abyss: #050710;
   --color-vice-card: #1A1A2E;
   --color-vice-card-hover: #222240;
   --color-vice-muted: #8B8B8B;
   --color-vice-border: #2A2A3E;
+  --color-accent-pink: #ff2d95;
+  --color-accent-cyan: #00d4ff;
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
@@ -246,4 +250,83 @@ body {
   background: rgba(255, 20, 147, 0.08);
   color: #FF1493;
   border: 1px solid rgba(255, 20, 147, 0.15);
+}
+
+/* ===== HOMEPAGE REDESIGN ===== */
+
+/* Grain overlay */
+.grain {
+  position: relative;
+}
+
+.grain::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.4'/%3E%3C/svg%3E");
+  background-size: 128px 128px;
+  opacity: 0.03;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Hero glow */
+.hero-glow {
+  background:
+    radial-gradient(ellipse 60% 50% at 50% 45%, rgba(255, 45, 149, 0.12) 0%, transparent 70%),
+    radial-gradient(ellipse 50% 40% at 55% 50%, rgba(0, 212, 255, 0.08) 0%, transparent 70%),
+    linear-gradient(180deg, #0a0e1a 0%, #050710 100%);
+}
+
+/* Section fade-in */
+.fade-section {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.fade-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fade-section {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .scroll-indicator {
+    animation: none;
+  }
+}
+
+/* Scroll indicator pulse */
+@keyframes scrollPulse {
+  0%, 100% { opacity: 0.4; transform: translateY(0); }
+  50% { opacity: 0.8; transform: translateY(6px); }
+}
+
+.scroll-indicator {
+  animation: scrollPulse 2s ease-in-out infinite;
+}
+
+/* Gallery scroll */
+.gallery-scroll {
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+.gallery-scroll > * {
+  scroll-snap-align: start;
+}
+
+/* Stat card glow on hover */
+.stat-card {
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.stat-card:hover {
+  border-color: rgba(0, 212, 255, 0.3);
+  box-shadow: 0 0 20px rgba(0, 212, 255, 0.05);
 }
