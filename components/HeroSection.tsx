@@ -1,4 +1,5 @@
 import CountdownTimer from '@/components/CountdownTimer';
+import CopyCA from '@/components/CopyCA';
 
 export default function HeroSection() {
   return (
@@ -30,6 +31,11 @@ export default function HeroSection() {
         <div className="mt-8 scroll-indicator">
           <div className="w-px h-12 bg-gradient-to-b from-transparent via-white/20 to-white/5" />
         </div>
+      </div>
+
+      {/* CA — tap to copy */}
+      <div className="relative z-10 w-full flex justify-center px-6 pb-12">
+        <CopyCA />
       </div>
 
       {/* Trailer embed section */}
