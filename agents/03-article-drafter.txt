@@ -26,7 +26,7 @@ drafts queue and SEO recommendations. NEVER publish directly.
 title: "SEO-optimized title with target keyword"
 slug: lowercase-hyphenated-slug
 date: YYYY-MM-DD
-author: Vice City Intel
+author: Vice City Sentinel
 excerpt: "Compelling 150-160 char description with keyword"
 tags: [tag1, tag2, tag3]
 category: content-pillar
@@ -49,4 +49,4 @@ published: false
 - NEVER reuse images — check image-log.csv before every image reference
 - Cite sources for all leaks and rumors
 - Clearly label speculation vs confirmed information
-- Tone: enthusiastic but credible, informed fan who does their homework
+- Tone: enthusiastic but credible, community-driven — a curious community who does their homework

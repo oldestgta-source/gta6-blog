@@ -23,10 +23,10 @@ export default function Header() {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 group">
             <span className="text-2xl font-black gradient-text tracking-tight">
-              GTA 6
+              $GTA
             </span>
             <span className="text-sm text-vice-muted font-medium hidden sm:block">
-              VICE CITY INTEL
+              VICE CITY SENTINEL
             </span>
           </Link>
 

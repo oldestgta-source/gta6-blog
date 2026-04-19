@@ -22,7 +22,7 @@ export default function NewsletterSignup() {
           Stay in the <span className="text-vice-pink">Loop</span>
         </h3>
         <p className="text-vice-muted text-sm mb-6">
-          Get GTA 6 news, leak breakdowns, and deep dives delivered to your inbox. No spam — only Vice City intel.
+          Get GTA 6 news, leak breakdowns, and deep dives delivered to your inbox. No spam — only Vice City sentinel reports.
         </p>
 
         {status === 'success' ? (

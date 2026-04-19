@@ -27,10 +27,10 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Brand */}
           <div>
-            <span className="text-xl font-black gradient-text">GTA 6</span>
+            <span className="text-xl font-black gradient-text">$GTA</span>
             <p className="mt-2 text-sm text-vice-muted leading-relaxed">
-              Vice City Intel — your source for GTA 6 news, leaks, deep dives, and guides.
-              An informed fan site that does its homework.
+              Vice City Sentinel — your community-driven source for GTA 6 news, leaks, deep dives, and guides.
+              A curious community that does its homework.
             </p>
           </div>
 
@@ -58,7 +58,7 @@ export default function Footer() {
 
         <div className="mt-10 pt-6 border-t border-vice-border flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-xs text-vice-muted">
-            &copy; {new Date().getFullYear()} GTA 6 Blog. Fan site — not affiliated with Rockstar Games or Take-Two Interactive.
+            &copy; {new Date().getFullYear()} $GTA Blog. Fan site — not affiliated with Rockstar Games or Take-Two Interactive.
           </p>
           <p className="text-xs text-vice-muted">
             Built with Next.js &middot; Deployed on Vercel

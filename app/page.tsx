@@ -23,13 +23,13 @@ export default function Home() {
       {/* Hero Section */}
       <section className="text-center py-16 sm:py-24">
         <h1 className="text-5xl sm:text-7xl font-black mb-4">
-          <span className="gradient-text">GTA 6</span>
+          <span className="gradient-text">$GTA</span>
         </h1>
         <p className="text-xl sm:text-2xl text-vice-muted font-medium mb-2">
-          Vice City Intel
+          Vice City Sentinel
         </p>
         <p className="text-sm text-vice-muted max-w-lg mx-auto">
-          News, leaks, deep dives, and guides — from an informed fan who does their homework.
+          News, leaks, deep dives, and guides — from a curious community who does their homework.
         </p>
 
         {/* Category pills */}
@@ -63,7 +63,7 @@ export default function Home() {
                     />
                   ) : (
                     <div className="w-full h-full min-h-[250px] flex items-center justify-center">
-                      <span className="text-6xl font-black gradient-text opacity-20">GTA VI</span>
+                      <span className="text-6xl font-black gradient-text opacity-20">$GTA</span>
                     </div>
                   )}
                 </div>
@@ -106,7 +106,7 @@ export default function Home() {
       {/* Empty state */}
       {posts.length === 0 && (
         <section className="text-center py-20">
-          <div className="text-6xl font-black gradient-text opacity-20 mb-4">GTA VI</div>
+          <div className="text-6xl font-black gradient-text opacity-20 mb-4">$GTA</div>
           <p className="text-vice-muted text-lg">
             Content incoming. The agents are drafting the first articles now.
           </p>

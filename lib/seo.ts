@@ -2,8 +2,8 @@ import type { Metadata } from 'next';
 import type { PostFrontmatter } from './posts';
 
 const SITE_URL = 'https://oldestgta.com';
-const SITE_NAME = 'GTA 6 Blog | Vice City Intel';
-const DEFAULT_DESCRIPTION = 'Your source for GTA 6 news, leaks, deep dives, and guides. Vice City coverage from an informed fan who does their homework.';
+const SITE_NAME = '$GTA Blog | Vice City Sentinel';
+const DEFAULT_DESCRIPTION = 'Your source for GTA 6 news, leaks, deep dives, and guides. Vice City coverage from a curious community who does their homework.';
 
 export function generateSiteMetadata(): Metadata {
   return {
@@ -75,7 +75,7 @@ export function generatePostMetadata(frontmatter: PostFrontmatter): Metadata {
 }
 
 export function generateCategoryMetadata(category: string): Metadata {
-  const title = `${category.charAt(0).toUpperCase() + category.slice(1).replace(/-/g, ' ')} — GTA 6`;
+  const title = `${category.charAt(0).toUpperCase() + category.slice(1).replace(/-/g, ' ')} — $GTA`;
   const description = `Browse all GTA 6 ${category.replace(/-/g, ' ')} articles, analysis, and coverage.`;
 
   return {
