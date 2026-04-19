@@ -28,7 +28,7 @@ export async function fetchPumpStats(): Promise<PumpStats> {
       next: { revalidate: 3600 },
     });
 
-    if (\!res.ok) return fallback;
+    if (!res.ok) return fallback;
 
     const data = await res.json();
 

@@ -6,7 +6,7 @@ export default function IntelSection() {
   const allPosts = getAllPosts();
   // Get latest posts excluding the leaks thread
   const recentPosts = allPosts
-    .filter((p) => p.slug \!== 'gta-6-leaked-footage-comprehensive-breakdown')
+    .filter((p) => p.slug !== 'gta-6-leaked-footage-comprehensive-breakdown')
     .slice(0, 3);
 
   return (
