@@ -35,19 +35,38 @@ export default function HeroSection() {
         </div>
       </div>
 
-      {/* Trailer embed section */}
-      <div className="relative z-10 w-full max-w-[1200px] mx-auto px-6 sm:px-8 pb-24 sm:pb-32">
-        <p className="text-xs text-white/20 uppercase tracking-[0.3em] mb-6 text-center">
-          Official Trailer 2
-        </p>
-        <div className="relative w-full aspect-video rounded-2xl overflow-hidden border border-white/5 shadow-2xl shadow-black/50">
-          <iframe
-            src="https://www.youtube.com/embed/QdBZY2fkU-0?rel=0&modestbranding=1&color=white"
-            title="Grand Theft Auto VI — Trailer 2"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowFullScreen
-            className="absolute inset-0 w-full h-full"
-          />
+      {/* Trailers */}
+      <div className="relative z-10 w-full max-w-[1200px] mx-auto px-6 sm:px-8 pb-24 sm:pb-32 flex flex-col gap-16">
+        {/* Trailer 2 */}
+        <div>
+          <p className="text-xs text-white/20 uppercase tracking-[0.3em] mb-6 text-center">
+            Official Trailer 2
+          </p>
+          <div className="relative w-full aspect-video rounded-2xl overflow-hidden border border-white/5 shadow-2xl shadow-black/50">
+            <iframe
+              src="https://www.youtube.com/embed/VQRLujxTm3c?rel=0&modestbranding=1&color=white"
+              title="Grand Theft Auto VI — Trailer 2"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+              className="absolute inset-0 w-full h-full"
+            />
+          </div>
+        </div>
+
+        {/* Trailer 1 */}
+        <div>
+          <p className="text-xs text-white/20 uppercase tracking-[0.3em] mb-6 text-center">
+            Official Trailer 1
+          </p>
+          <div className="relative w-full aspect-video rounded-2xl overflow-hidden border border-white/5 shadow-2xl shadow-black/50">
+            <iframe
+              src="https://www.youtube.com/embed/QdBZY2fkU-0?rel=0&modestbranding=1&color=white"
+              title="Grand Theft Auto VI — Trailer 1"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+              className="absolute inset-0 w-full h-full"
+            />
+          </div>
         </div>
       </div>
     </section>
