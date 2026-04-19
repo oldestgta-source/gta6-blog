@@ -7,6 +7,7 @@ const categories = [
   { name: 'Leaks', href: '/leaks' },
   { name: 'Blogs', href: '/blogs' },
   { name: 'Characters', href: '/characters' },
+  { name: 'Locations', href: '/locations' },
   { name: 'Guides', href: '/guides' },
   { name: 'Opinion', href: '/category/opinion' },
   { name: 'GTAVI Online', href: '/gtavi-online' },
