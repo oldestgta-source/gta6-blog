@@ -49,6 +49,25 @@ export default function CommunitySection() {
           </a>
         </div>
 
+        {/* DexScreener Chart */}
+        <div className="w-full max-w-[900px] mt-4">
+          <p className="text-xs uppercase tracking-[0.25em] text-accent-cyan mb-4">
+            Live Chart
+          </p>
+          <div className="rounded-xl overflow-hidden border border-accent-pink/30">
+            <iframe
+              src="https://dexscreener.com/solana/dtbjgzzycknxerkppydes3anmxf1rw7uenkrcnd4vuyb?embed=1&theme=dark&info=0"
+              className="w-full"
+              style={{ height: '500px', border: 'none' }}
+              title="$GTA DexScreener Chart"
+              loading="lazy"
+            />
+          </div>
+          <p className="text-[10px] text-white/15 mt-2">
+            Monitor $GTA market performance on Solana.
+          </p>
+        </div>
+
         {/* Disclaimer */}
         <p className="text-[11px] text-white/15 max-w-md leading-relaxed">
           Fan site, not affiliated with Rockstar Games or Take-Two Interactive. $GTA is a community token — not investment advice.
