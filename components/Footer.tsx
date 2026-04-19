@@ -22,6 +22,7 @@ export default function Footer() {
           <div className="flex flex-wrap gap-x-6 gap-y-2">
             <Link href="/leaks" className="text-xs text-white/20 hover:text-white/50 transition-colors">Leaks</Link>
             <Link href="/blogs" className="text-xs text-white/20 hover:text-white/50 transition-colors">Blogs</Link>
+            <Link href="/characters" className="text-xs text-white/20 hover:text-white/50 transition-colors">Characters</Link>
             <Link href="/guides" className="text-xs text-white/20 hover:text-white/50 transition-colors">Guides</Link>
             <Link href="/gtavi-online" className="text-xs text-white/20 hover:text-white/50 transition-colors">GTAVI Online</Link>
             <a href="https://x.com/oldestgta" target="_blank" rel="noopener noreferrer" className="text-xs text-white/20 hover:text-white/50 transition-colors">Twitter / X</a>
