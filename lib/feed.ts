@@ -7,6 +7,7 @@ export interface FeedItem {
   source: string;
   date: string;
   tag: string;
+  image?: string;
 }
 
 const feedPath = path.join(process.cwd(), 'content/feed/feed.json');
