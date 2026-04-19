@@ -8,7 +8,7 @@ export default function HeroSection() {
       <div className="absolute inset-0 hero-glow" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_40%,rgba(255,45,149,0.06)_0%,transparent_60%)]" />
 
-      {/* Top section — logo, date, countdown */}
+      {/* Top section — logo, date, countdown, CA */}
       <div className="relative z-10 min-h-screen flex flex-col items-center justify-center text-center px-6 gap-8">
         <h1 className="text-8xl sm:text-[10rem] lg:text-[12rem] font-black tracking-tighter leading-none">
           <span className="gradient-text">$GTA</span>
@@ -27,15 +27,12 @@ export default function HeroSection() {
 
         <CountdownTimer />
 
+        <CopyCA />
+
         {/* Scroll indicator */}
-        <div className="mt-8 scroll-indicator">
+        <div className="scroll-indicator">
           <div className="w-px h-12 bg-gradient-to-b from-transparent via-white/20 to-white/5" />
         </div>
-      </div>
-
-      {/* CA — tap to copy */}
-      <div className="relative z-10 w-full flex justify-center px-6 pb-12">
-        <CopyCA />
       </div>
 
       {/* Trailer embed section */}
