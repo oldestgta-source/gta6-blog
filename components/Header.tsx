@@ -4,13 +4,11 @@ import Link from 'next/link';
 import { useState, useEffect } from 'react';
 
 const categories = [
-  { name: 'News', href: '/category/news' },
   { name: 'Leaks', href: '/leaks' },
   { name: 'Blogs', href: '/blogs' },
-  { name: 'Guides', href: '/category/guides' },
+  { name: 'Guides', href: '/guides' },
   { name: 'Opinion', href: '/category/opinion' },
-  { name: 'GTA Online 2', href: '/category/gta-online-2' },
-  { name: 'Comparison', href: '/category/comparison' },
+  { name: 'GTAVI Online', href: '/gtavi-online' },
 ];
 
 export default function Header() {
