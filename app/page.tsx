@@ -1,5 +1,4 @@
 import HeroSection from '@/components/HeroSection';
-import IntelSection from '@/components/IntelSection';
 import ViceCityGallery from '@/components/ViceCityGallery';
 import ContentGrid from '@/components/ContentGrid';
 import CommunitySection from '@/components/CommunitySection';
@@ -10,10 +9,6 @@ export default function Home() {
     <>
       <FadeObserver />
       <HeroSection />
-
-      <div className="fade-section">
-        <IntelSection />
-      </div>
 
       <div className="fade-section">
         <ViceCityGallery />
