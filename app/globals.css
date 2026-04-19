@@ -330,3 +330,27 @@ body {
   border-color: rgba(0, 212, 255, 0.3);
   box-shadow: 0 0 20px rgba(0, 212, 255, 0.05);
 }
+
+/* Release date warm gradient — matches Rockstar's gold/coral */
+.release-date-text {
+  background: linear-gradient(180deg, #f5c77e 0%, #e88b6a 50%, #d4697a 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Explore location card */
+.explore-card {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.explore-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 40px rgba(0, 212, 255, 0.08);
+}
+
+/* Full-bleed section */
+.section-bleed {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+}
