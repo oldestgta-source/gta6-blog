@@ -113,6 +113,46 @@ export default function Home() {
         </section>
       )}
 
+      {/* Community Takeover Banner */}
+      <section className="my-12 bg-gradient-to-r from-vice-card to-vice-card-hover border border-vice-border rounded-xl overflow-hidden">
+        <div className="p-8 sm:p-10">
+          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6">
+            <div className="flex-1">
+              <h3 className="text-xl font-bold text-white mb-2">
+                <span className="text-vice-pink">$GTA</span> Community Takeover
+              </h3>
+              <p className="text-sm text-vice-muted leading-relaxed mb-4">
+                This site is built and funded by the $GTA community. Support us by picking up the oldest $GTA coin on pump.fun — every holder helps keep this project alive and growing.
+              </p>
+              <div className="flex flex-col sm:flex-row items-start gap-3 mb-4">
+                <span className="text-xs font-semibold text-vice-teal uppercase tracking-wider">CA:</span>
+                <code className="text-xs text-vice-muted bg-vice-darker px-3 py-1.5 rounded-md border border-vice-border break-all select-all">
+                  EzL6hy8z79dv674kGipoL8VnEokQ5931iMk6Hj2zcN15
+                </code>
+              </div>
+            </div>
+            <div className="flex flex-col gap-3 shrink-0">
+              <a
+                href="https://pump.fun/coin/EzL6hy8z79dv674kGipoL8VnEokQ5931iMk6Hj2zcN15"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-6 py-3 bg-vice-pink hover:bg-vice-pink/80 text-white font-semibold rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-vice-pink/25 text-sm text-center whitespace-nowrap"
+              >
+                Buy $GTA on Pump.fun
+              </a>
+              <a
+                href="https://x.com/oldestgta"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-6 py-3 bg-vice-card hover:bg-vice-card-hover border border-vice-border text-vice-teal font-semibold rounded-lg transition-all text-sm text-center whitespace-nowrap hover:border-vice-teal/50"
+              >
+                Follow @oldestgta
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Newsletter */}
       <NewsletterSignup />
     </div>
