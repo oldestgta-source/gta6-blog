@@ -6,7 +6,7 @@ import { useState, useEffect } from 'react';
 const categories = [
   { name: 'News', href: '/category/news' },
   { name: 'Leaks', href: '/leaks' },
-  { name: 'Deep Dives', href: '/category/deep-dive' },
+  { name: 'Blogs', href: '/blogs' },
   { name: 'Guides', href: '/category/guides' },
   { name: 'Opinion', href: '/category/opinion' },
   { name: 'GTA Online 2', href: '/category/gta-online-2' },
