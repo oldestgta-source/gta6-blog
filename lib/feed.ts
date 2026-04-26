@@ -6,15 +6,21 @@ export interface FeedItem {
   url: string;
   source: string;
   date: string;
-  tag: string;
+  excerpt: string;
+  category: string;
   image?: string;
+  tag?: string;
 }
 
-const feedPath = path.join(process.cwd(), 'content/feed/feed.json');
-
-export function getFeed(): FeedItem[] {
+export function getFeed(limit?: number): FeedItem[] {
+  const feedPath = path.join(process.cwd(), 'content/feed/feed.json');
   if (!fs.existsSync(feedPath)) return [];
-  const raw = fs.readFileSync(feedPath, 'utf8');
+
+  const raw = fs.readFileSync(feedPath, 'utf-8');
   const items: FeedItem[] = JSON.parse(raw);
-  return items.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+
+  // Sort by date descending
+  items.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+
+  return limit ? items.slice(0, limit) : items;
 }

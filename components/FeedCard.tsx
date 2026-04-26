@@ -1,75 +1,40 @@
-import { FeedItem } from '@/lib/feed';
+import type { FeedItem } from '@/lib/feed';
 
 const sourceColors: Record<string, string> = {
-  'Insider Gaming': 'text-amber-400 border-amber-400/20',
-  'GameSpot': 'text-red-400 border-red-400/20',
-  'Kotaku': 'text-orange-400 border-orange-400/20',
-  'GamesRadar': 'text-purple-400 border-purple-400/20',
-  'PC Gamer': 'text-emerald-400 border-emerald-400/20',
-  'IGN': 'text-red-500 border-red-500/20',
+  'IGN': 'bg-red-500/20 text-red-400',
+  'Insider Gaming': 'bg-purple-500/20 text-purple-400',
+  'GamesRadar+': 'bg-orange-500/20 text-orange-400',
+  'GameSpot': 'bg-yellow-500/20 text-yellow-400',
+  'Kotaku': 'bg-green-500/20 text-green-400',
+  'PC Gamer': 'bg-blue-500/20 text-blue-400',
 };
 
-function getSourceStyle(source: string) {
-  return sourceColors[source] || 'text-vice-teal border-vice-teal/20';
-}
-
 export default function FeedCard({ item }: { item: FeedItem }) {
+  const colorClass = sourceColors[item.source] || 'bg-white/10 text-white/60';
   return (
     <a
       href={item.url}
       target="_blank"
       rel="noopener noreferrer"
-      className="group block"
+      className="group block bg-vice-card border border-vice-border rounded-xl p-5 transition-all duration-300 hover:border-accent-cyan/30 hover:bg-vice-card-hover"
     >
-      <article className="h-full bg-vice-abyss border border-white/5 rounded-xl overflow-hidden hover:border-white/10 transition-all duration-300 flex flex-col">
-        {/* Cover image */}
-        {item.image && (
-          <div className="relative aspect-[16/9] overflow-hidden">
-            <img
-              src={item.image}
-              alt=""
-              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-              loading="lazy"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-vice-abyss via-transparent to-transparent" />
-          </div>
-        )}
-
-        {/* Content */}
-        <div className="p-5 flex flex-col justify-between flex-1 gap-4">
-          <div>
-            {/* Source + tag */}
-            <div className="flex items-center gap-2 mb-3">
-              <span className={`text-[10px] font-semibold uppercase tracking-[0.15em] px-2 py-0.5 border rounded-full ${getSourceStyle(item.source)}`}>
-                {item.source}
-              </span>
-              <span className="text-[10px] text-white/15 uppercase tracking-wider">
-                {item.tag}
-              </span>
-            </div>
-
-            {/* Title */}
-            <h3 className="text-base font-bold text-white leading-snug group-hover:text-vice-teal transition-colors line-clamp-3">
-              {item.title}
-            </h3>
-          </div>
-
-          {/* Date + external indicator */}
-          <div className="flex items-center justify-between">
-            <span className="text-xs text-white/20">
-              {new Date(item.date).toLocaleDateString('en-US', {
-                month: 'short',
-                day: 'numeric',
-                year: 'numeric',
-              })}
-            </span>
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-white/15 group-hover:text-vice-teal transition-colors">
-              <path d="M7 17L17 7" />
-              <path d="M7 7h10v10" />
-            </svg>
-          </div>
-        </div>
-      </article>
+      <div className="flex items-center gap-2 mb-3">
+        <span className={`text-[10px] font-semibold uppercase tracking-wider px-2 py-0.5 rounded-full ${colorClass}`}>
+          {item.source}
+        </span>
+        <span className="text-[10px] text-white/25">
+          {new Date(item.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}
+        </span>
+      </div>
+      <h3 className="text-sm font-bold text-white mb-2 group-hover:text-accent-cyan transition-colors line-clamp-2">
+        {item.title}
+      </h3>
+      <p className="text-xs text-white/40 line-clamp-2 leading-relaxed">
+        {item.excerpt}
+      </p>
+      <span className="text-[10px] text-accent-cyan/60 mt-3 block group-hover:text-accent-pink transition-colors">
+        Read on {item.source} &rarr;
+      </span>
     </a>
   );
 }

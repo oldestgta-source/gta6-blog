@@ -26,7 +26,7 @@ Create /logs/social/social-YYYY-MM-DD-slug.md with:
 - Opening hook (first line most important)
 - Key points as short paragraphs
 - Hashtag block (20-30 relevant hashtags)
-- CTA: "Link in bio" or "Full article at oldestgta.com"
+- CTA: "Link in bio" or "Full article at luciaeth.com"
 
 ## Rules
 - DRAFT ONLY — never auto-post to any platform

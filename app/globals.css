@@ -1,20 +1,22 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-background: #0F0F0F;
+  --color-background: #0B0B1A;
   --color-foreground: #EDEDED;
   --color-vice-pink: #FF1493;
-  --color-vice-teal: #00CED1;
-  --color-vice-dark: #0F0F0F;
-  --color-vice-darker: #0A0A0A;
+  --color-vice-teal: #627EEA;
+  --color-vice-dark: #0B0B1A;
+  --color-vice-darker: #080814;
   --color-vice-deep: #0a0e1a;
   --color-vice-abyss: #050710;
-  --color-vice-card: #1A1A2E;
-  --color-vice-card-hover: #222240;
+  --color-vice-card: #151530;
+  --color-vice-card-hover: #1E1E42;
   --color-vice-muted: #8B8B8B;
-  --color-vice-border: #2A2A3E;
+  --color-vice-border: #252548;
   --color-accent-pink: #ff2d95;
-  --color-accent-cyan: #00d4ff;
+  --color-accent-cyan: #627EEA;
+  --color-eth-purple: #627EEA;
+  --color-eth-blue: #8B9FEF;
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
@@ -31,7 +33,7 @@ body {
 }
 
 .neon-teal {
-  text-shadow: 0 0 7px #00CED1, 0 0 10px #00CED1, 0 0 21px #00CED1;
+  text-shadow: 0 0 7px #627EEA, 0 0 10px #627EEA, 0 0 21px #627EEA;
 }
 
 .glow-border-pink {
@@ -44,7 +46,7 @@ body {
 
 /* Gradient text utility */
 .gradient-text {
-  background: linear-gradient(135deg, #FF1493, #00CED1);
+  background: linear-gradient(135deg, #FF1493, #627EEA);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -65,7 +67,7 @@ body {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #FF1493;
+  background: #627EEA;
 }
 
 /* Selection styling */
@@ -78,7 +80,7 @@ body {
 .prose {
   --tw-prose-body: #EDEDED;
   --tw-prose-headings: #FFFFFF;
-  --tw-prose-links: #00CED1;
+  --tw-prose-links: #627EEA;
   --tw-prose-bold: #FFFFFF;
   --tw-prose-code: #FF1493;
   --tw-prose-quotes: #8B8B8B;
@@ -112,7 +114,7 @@ body {
 }
 
 .prose a {
-  color: #00CED1;
+  color: #627EEA;
   text-decoration: underline;
   text-underline-offset: 2px;
   transition: color 0.2s;
@@ -194,13 +196,13 @@ body {
   left: 0;
   width: 60px;
   height: 2px;
-  background: linear-gradient(90deg, #FF1493, #00CED1);
+  background: linear-gradient(90deg, #FF1493, #627EEA);
 }
 
 .thread-prose h3 {
   font-size: 1.35em;
   margin-top: 2em;
-  color: #00CED1;
+  color: #627EEA;
 }
 
 /* Section dividers in thread */
@@ -221,7 +223,7 @@ body {
 }
 
 .thread-prose img:hover {
-  border-color: rgba(0, 206, 209, 0.4);
+  border-color: rgba(98, 126, 234, 0.4);
 }
 
 /* Thread list items — tighter, more styled */
@@ -230,7 +232,7 @@ body {
 }
 
 .thread-prose li strong {
-  color: #00CED1;
+  color: #627EEA;
 }
 
 /* Thread blockquotes — used as callout boxes */
@@ -273,8 +275,8 @@ body {
 /* Hero glow */
 .hero-glow {
   background:
-    radial-gradient(ellipse 60% 50% at 50% 45%, rgba(255, 45, 149, 0.12) 0%, transparent 70%),
-    radial-gradient(ellipse 50% 40% at 55% 50%, rgba(0, 212, 255, 0.08) 0%, transparent 70%),
+    radial-gradient(ellipse 60% 50% at 50% 45%, rgba(255, 45, 149, 0.10) 0%, transparent 70%),
+    radial-gradient(ellipse 50% 40% at 55% 50%, rgba(98, 126, 234, 0.12) 0%, transparent 70%),
     linear-gradient(180deg, #0a0e1a 0%, #050710 100%);
 }
 
@@ -327,8 +329,8 @@ body {
 }
 
 .stat-card:hover {
-  border-color: rgba(0, 212, 255, 0.3);
-  box-shadow: 0 0 20px rgba(0, 212, 255, 0.05);
+  border-color: rgba(98, 126, 234, 0.3);
+  box-shadow: 0 0 20px rgba(98, 126, 234, 0.05);
 }
 
 /* Release date warm gradient — matches Rockstar's gold/coral */
@@ -346,7 +348,7 @@ body {
 
 .explore-card:hover {
   transform: scale(1.02);
-  box-shadow: 0 0 40px rgba(0, 212, 255, 0.08);
+  box-shadow: 0 0 40px rgba(98, 126, 234, 0.08);
 }
 
 /* Full-bleed section */

@@ -1,77 +1,63 @@
-import StatsRow from '@/components/StatsRow';
-import CopyCA from '@/components/CopyCA';
+const CA = '0xb81377F1Bc45FFb7Ff9F4adf83E4FA3EA3a74A46';
 
 export default function CommunitySection() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center grain overflow-hidden">
-      {/* Deep dark background */}
-      <div className="absolute inset-0 bg-vice-abyss" />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_50%,rgba(255,45,149,0.04)_0%,transparent_70%)]" />
-
-      <div className="relative z-10 w-full max-w-[1000px] mx-auto px-6 sm:px-8 py-24 flex flex-col items-center text-center gap-12">
-        {/* Logo echo — like Rockstar's closing GTA VI logo */}
-        <div className="text-6xl sm:text-8xl font-black gradient-text opacity-80">
-          $GTA
+    <section className="py-16 sm:py-24 bg-vice-deep">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
+        {/* Echo logo */}
+        <div className="text-[6rem] sm:text-[8rem] font-black leading-none tracking-tighter select-none mb-6 opacity-10">
+          <span className="gradient-text">$Lucia</span>
         </div>
 
-        <h2 className="text-2xl sm:text-4xl font-black text-white leading-tight">
-          Built by the Community
+        <p className="text-xs uppercase tracking-[0.25em] text-accent-pink mb-3">
+          OG Lucia on Ethereum
+        </p>
+        <h2 className="text-2xl sm:text-4xl font-black text-white mb-4">
+          She&apos;s back to claim her throne on <span className="text-eth-purple">ETH</span>.
         </h2>
-
-        <p className="text-base text-white/30 max-w-lg leading-relaxed">
-          This site is funded and driven by holders of the oldest $GTA coin on Pump.fun.
-          Every holder keeps the lights on. Not affiliated with Rockstar — just a community that cares about the game.
+        <p className="text-sm text-white/40 max-w-xl mx-auto mb-4 leading-relaxed">
+          $Lucia is the original Lucia token on Ethereum — launched over 2 years ago. The OG is back, and with GTA 6 on the horizon, Lucia is ready to change the odds in her favor.
+        </p>
+        <p className="text-xs text-white/25 max-w-md mx-auto mb-8">
+          Funded and driven by the $Lucia community. Every holder helps keep this project alive and growing.
         </p>
 
-        {/* Stats */}
-        <StatsRow />
-
-        {/* CA */}
-        <CopyCA />
+        {/* ETH logo + CA display */}
+        <div className="flex flex-col items-center gap-4 mb-8">
+          <img src="/images/eth-logo.svg" alt="Ethereum" className="w-8 h-12 opacity-40" />
+          <div className="inline-flex items-center gap-3 px-5 py-3 rounded-full border border-white/10 bg-white/[0.03]">
+            <span className="text-[10px] uppercase tracking-wider text-eth-purple font-semibold">ETH CA</span>
+            <code className="text-xs text-white/50 font-mono break-all select-all">{CA}</code>
+          </div>
+        </div>
 
         {/* CTAs */}
-        <div className="flex flex-col sm:flex-row gap-4">
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
-            href="https://pump.fun/coin/EzL6hy8z79dv674kGipoL8VnEokQ5931iMk6Hj2zcN15"
+            href={`https://etherscan.io/token/${CA}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="px-8 py-3.5 bg-accent-pink hover:bg-accent-pink/80 text-white font-semibold rounded-full transition-all duration-300 hover:shadow-lg hover:shadow-accent-pink/20 text-sm text-center whitespace-nowrap"
+            className="px-8 py-3.5 bg-eth-purple hover:bg-eth-purple/80 text-white font-semibold rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-eth-purple/25 text-sm"
           >
-            Buy $GTA on Pump.fun
+            View on Etherscan
           </a>
           <a
-            href="https://x.com/oldestgta"
+            href={`https://app.uniswap.org/swap?outputCurrency=${CA}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="px-8 py-3.5 border border-white/10 hover:border-accent-cyan/40 text-accent-cyan font-semibold rounded-full transition-all text-sm text-center whitespace-nowrap"
+            className="px-8 py-3.5 bg-accent-pink hover:bg-accent-pink/80 text-white font-semibold rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-accent-pink/25 text-sm"
           >
-            Follow @oldestgta
+            Buy $Lucia on Uniswap
+          </a>
+          <a
+            href="https://x.com/luciaethereum"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-8 py-3.5 border border-vice-border hover:border-eth-purple/50 text-eth-purple font-semibold rounded-lg transition-all text-sm"
+          >
+            Follow @luciaethereum
           </a>
         </div>
-
-        {/* DexScreener Chart */}
-        <div className="w-full max-w-[900px] mt-4">
-          <p className="text-xs uppercase tracking-[0.25em] text-accent-cyan mb-4">
-            Live Chart
-          </p>
-          <div className="rounded-xl overflow-hidden border border-accent-pink/30">
-            <iframe
-              src="https://dexscreener.com/solana/dtbjgzzycknxerkppydes3anmxf1rw7uenkrcnd4vuyb?embed=1&theme=dark&info=0"
-              className="w-full"
-              style={{ height: '500px', border: 'none' }}
-              title="$GTA DexScreener Chart"
-              loading="lazy"
-            />
-          </div>
-          <p className="text-[10px] text-white/15 mt-2">
-            Monitor $GTA market performance on Solana.
-          </p>
-        </div>
-
-        {/* Disclaimer */}
-        <p className="text-[11px] text-white/15 max-w-md leading-relaxed">
-          Fan site, not affiliated with Rockstar Games or Take-Two Interactive. $GTA is a community token — not investment advice.
-        </p>
       </div>
     </section>
   );

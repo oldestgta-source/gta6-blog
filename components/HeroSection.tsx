@@ -3,66 +3,86 @@ import CopyCA from '@/components/CopyCA';
 
 export default function HeroSection() {
   return (
-    <section className="relative flex flex-col items-center overflow-hidden grain">
-      {/* Background layers */}
-      <div className="absolute inset-0 hero-glow" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_40%,rgba(255,45,149,0.06)_0%,transparent_60%)]" />
-
-      {/* Top section — logo, date, countdown, CA */}
-      <div className="relative z-10 min-h-screen flex flex-col items-center justify-center text-center px-6 gap-8">
-        <h1 className="text-8xl sm:text-[10rem] lg:text-[12rem] font-black tracking-tighter leading-none">
-          <span className="gradient-text">$GTA</span>
-        </h1>
-
-        <p className="text-sm sm:text-base text-white/30 uppercase tracking-[0.3em] font-medium">
-          Vice City Sentinel
-        </p>
-
-        <div className="mt-4 flex flex-col items-center gap-3">
-          <p className="text-xs text-white/20 uppercase tracking-[0.25em]">GTA VI Releases</p>
-          <p className="text-3xl sm:text-5xl lg:text-6xl font-black uppercase release-date-text leading-tight text-center">
-            November 19<br />2026
-          </p>
+    <section className="relative">
+      {/* Main hero viewport */}
+      <div className="hero-glow grain min-h-screen flex flex-col items-center justify-center text-center px-4 relative">
+        {/* ETH logo */}
+        <div className="mb-4">
+          <img src="/images/eth-logo.svg" alt="Ethereum" className="w-16 h-24 sm:w-20 sm:h-32 mx-auto opacity-60" />
         </div>
 
-        <CountdownTimer />
+        {/* Oversized logo */}
+        <h1 className="text-[7rem] sm:text-[10rem] md:text-[13rem] font-black leading-none tracking-tighter select-none">
+          <span className="gradient-text">$Lucia</span>
+        </h1>
 
-        <CopyCA />
+        {/* Subtitle */}
+        <p className="text-xs sm:text-sm uppercase tracking-[0.3em] text-white/30 mt-2 mb-4">
+          The OG Lucia Token on Ethereum
+        </p>
+
+        {/* Lucia tagline */}
+        <p className="text-sm sm:text-base text-white/50 max-w-lg mx-auto mb-6 leading-relaxed italic">
+          &ldquo;Fresh out of prison and ready to change the odds in her favor&rdquo;
+        </p>
+
+        {/* Token age badge */}
+        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-eth-purple/30 bg-eth-purple/5 mb-6">
+          <span className="text-[10px] sm:text-xs text-eth-purple font-semibold uppercase tracking-wider">Launched 2+ Years Ago</span>
+          <span className="text-[10px] text-white/30">|</span>
+          <span className="text-[10px] sm:text-xs text-white/40">The OG $Lucia on ETH</span>
+        </div>
+
+        {/* Release date */}
+        <p className="text-2xl sm:text-4xl font-black release-date-text mb-6">
+          November 19, 2026
+        </p>
+
+        {/* Countdown */}
+        <div className="mb-5">
+          <CountdownTimer />
+        </div>
+
+        {/* CA copy */}
+        <div className="mb-10">
+          <CopyCA />
+        </div>
 
         {/* Scroll indicator */}
-        <div className="scroll-indicator">
-          <div className="w-px h-12 bg-gradient-to-b from-transparent via-white/20 to-white/5" />
+        <div className="scroll-indicator text-white/30 text-2xl">
+          &#8595;
         </div>
       </div>
 
-      {/* Trailers */}
-      <div className="relative z-10 w-full max-w-[1200px] mx-auto px-6 sm:px-8 pb-24 sm:pb-32 flex flex-col gap-16">
-        {/* Trailer 2 */}
-        <div>
-          <p className="text-xs text-white/20 uppercase tracking-[0.3em] mb-6 text-center">
+      {/* Trailer 2 */}
+      <div className="w-full bg-vice-abyss py-8 sm:py-12">
+        <div className="max-w-5xl mx-auto px-4">
+          <p className="text-xs uppercase tracking-[0.25em] text-white/30 text-center mb-4">
             Official Trailer 2
           </p>
-          <div className="relative w-full aspect-video rounded-2xl overflow-hidden border border-white/5 shadow-2xl shadow-black/50">
+          <div className="relative w-full aspect-video rounded-lg overflow-hidden border border-white/5">
             <iframe
               src="https://www.youtube.com/embed/VQRLujxTm3c?rel=0&modestbranding=1&color=white"
-              title="Grand Theft Auto VI — Trailer 2"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              title="Grand Theft Auto VI Trailer 2"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
               className="absolute inset-0 w-full h-full"
             />
           </div>
         </div>
+      </div>
 
-        {/* Trailer 1 */}
-        <div>
-          <p className="text-xs text-white/20 uppercase tracking-[0.3em] mb-6 text-center">
+      {/* Trailer 1 */}
+      <div className="w-full bg-vice-abyss py-8 sm:py-12">
+        <div className="max-w-5xl mx-auto px-4">
+          <p className="text-xs uppercase tracking-[0.25em] text-white/30 text-center mb-4">
             Official Trailer 1
           </p>
-          <div className="relative w-full aspect-video rounded-2xl overflow-hidden border border-white/5 shadow-2xl shadow-black/50">
+          <div className="relative w-full aspect-video rounded-lg overflow-hidden border border-white/5">
             <iframe
               src="https://www.youtube.com/embed/QdBZY2fkU-0?rel=0&modestbranding=1&color=white"
-              title="Grand Theft Auto VI — Trailer 1"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              title="Grand Theft Auto VI Trailer 1"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
               className="absolute inset-0 w-full h-full"
             />

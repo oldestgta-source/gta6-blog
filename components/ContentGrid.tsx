@@ -1,32 +1,30 @@
 import { getFeed } from '@/lib/feed';
 import FeedCard from '@/components/FeedCard';
+import Link from 'next/link';
 
 export default function ContentGrid() {
-  const feed = getFeed();
-  if (feed.length === 0) return null;
+  const items = getFeed(6);
+
+  if (items.length === 0) return null;
 
   return (
-    <section className="py-24 sm:py-32 bg-vice-darker">
-      <div className="max-w-[1400px] mx-auto px-6 sm:px-8">
-        <div className="flex items-end justify-between mb-12">
-          <div>
-            <p className="text-xs text-white/20 uppercase tracking-[0.3em] mb-4">
-              Curated
-            </p>
-            <h2 className="text-3xl sm:text-4xl font-black text-white">
-              GTA 6 Newsfeed
-            </h2>
-          </div>
-          <p className="hidden sm:block text-xs text-white/20 max-w-xs text-right leading-relaxed">
-            The latest from Insider Gaming, GameSpot, Kotaku, GamesRadar, and more — curated by the $GTA community.
-          </p>
-        </div>
+    <section className="max-w-7xl mx-auto px-4 sm:px-6 py-16 sm:py-24">
+      <div className="flex items-center justify-between mb-8">
+        <p className="text-xs uppercase tracking-[0.25em] text-accent-cyan">
+          Curated Newsfeed
+        </p>
+        <Link
+          href="/blogs"
+          className="text-xs text-white/30 hover:text-accent-pink transition-colors"
+        >
+          View all &rarr;
+        </Link>
+      </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          {feed.map((item) => (
-            <FeedCard key={item.url} item={item} />
-          ))}
-        </div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        {items.map((item) => (
+          <FeedCard key={item.url} item={item} />
+        ))}
       </div>
     </section>
   );

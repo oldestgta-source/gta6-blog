@@ -2,43 +2,37 @@
 
 import { useState, useEffect } from 'react';
 
-const RELEASE = new Date('2026-11-19T00:00:00');
-
-function getTimeLeft() {
-  const now = new Date();
-  const diff = RELEASE.getTime() - now.getTime();
-  if (diff <= 0) return { days: 0, hours: 0, minutes: 0, seconds: 0 };
-  return {
-    days: Math.floor(diff / (1000 * 60 * 60 * 24)),
-    hours: Math.floor((diff / (1000 * 60 * 60)) % 24),
-    minutes: Math.floor((diff / (1000 * 60)) % 60),
-    seconds: Math.floor((diff / 1000) % 60),
-  };
-}
+const TARGET = new Date('2026-11-19T00:00:00-05:00').getTime();
 
 export default function CountdownTimer() {
-  const [time, setTime] = useState(getTimeLeft);
+  const [now, setNow] = useState(Date.now());
 
   useEffect(() => {
-    const id = setInterval(() => setTime(getTimeLeft()), 1000);
+    const id = setInterval(() => setNow(Date.now()), 1000);
     return () => clearInterval(id);
   }, []);
 
+  const diff = Math.max(0, TARGET - now);
+  const days = Math.floor(diff / 86400000);
+  const hours = Math.floor((diff % 86400000) / 3600000);
+  const minutes = Math.floor((diff % 3600000) / 60000);
+  const seconds = Math.floor((diff % 60000) / 1000);
+
   const blocks = [
-    { value: time.days, label: 'Days' },
-    { value: time.hours, label: 'Hours' },
-    { value: time.minutes, label: 'Min' },
-    { value: time.seconds, label: 'Sec' },
+    { label: 'Days', value: days },
+    { label: 'Hours', value: hours },
+    { label: 'Min', value: minutes },
+    { label: 'Sec', value: seconds },
   ];
 
   return (
-    <div className="flex gap-4 sm:gap-6">
+    <div className="flex gap-3 sm:gap-5 justify-center">
       {blocks.map((b) => (
         <div key={b.label} className="flex flex-col items-center">
-          <span className="text-2xl sm:text-4xl font-bold text-white tabular-nums">
+          <span className="text-3xl sm:text-5xl font-black text-white tabular-nums tracking-tight">
             {String(b.value).padStart(2, '0')}
           </span>
-          <span className="text-[10px] text-white/25 uppercase tracking-widest mt-1">
+          <span className="text-[10px] sm:text-xs uppercase tracking-widest text-white/40 mt-1">
             {b.label}
           </span>
         </div>

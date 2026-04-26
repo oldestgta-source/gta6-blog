@@ -5,7 +5,7 @@ import ShareButtons from '@/components/ShareButtons';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'GTA 6 Leaks Thread — Every Detail From the September 2022 Footage | $GTA',
+  title: 'GTA 6 Leaks Thread — Every Detail From the September 2022 Footage | $Lucia',
   description:
     'The definitive thread covering every GTA 6 leak — 90 video clips, characters, weapons, mechanics, vehicles, locations, maps, development builds, and every subsequent leak.',
   openGraph: {

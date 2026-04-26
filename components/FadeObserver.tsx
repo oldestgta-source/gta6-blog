@@ -18,7 +18,7 @@ export default function FadeObserver() {
       { threshold: 0.1 }
     );
 
-    sections.forEach((el) => observer.observe(el));
+    sections.forEach((s) => observer.observe(s));
     return () => observer.disconnect();
   }, []);
 
