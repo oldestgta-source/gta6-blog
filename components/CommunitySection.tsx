@@ -1,6 +1,18 @@
+'use client';
+
+import { useState } from 'react';
+
 const CA = '0xb81377F1Bc45FFb7Ff9F4adf83E4FA3EA3a74A46';
 
 export default function CommunitySection() {
+  const [copied, setCopied] = useState(false);
+
+  const handleCopy = () => {
+    navigator.clipboard.writeText(CA);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
+
   return (
     <section className="py-16 sm:py-24 bg-vice-deep">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
@@ -22,13 +34,19 @@ export default function CommunitySection() {
           Funded and driven by the $Lucia community. Every holder helps keep this project alive and growing.
         </p>
 
-        {/* ETH logo + CA display */}
+        {/* ETH logo + CA display — click to copy */}
         <div className="flex flex-col items-center gap-4 mb-8">
           <img src="/images/eth-logo.svg" alt="Ethereum" className="w-8 h-12 opacity-40" />
-          <div className="inline-flex items-center gap-3 px-5 py-3 rounded-full border border-white/10 bg-white/[0.03]">
+          <button
+            onClick={handleCopy}
+            className="inline-flex items-center gap-3 px-5 py-3 rounded-full border border-white/10 bg-white/[0.03] hover:border-eth-purple/40 hover:bg-eth-purple/5 transition-all duration-300 cursor-pointer group"
+          >
             <span className="text-[10px] uppercase tracking-wider text-eth-purple font-semibold">ETH CA</span>
-            <code className="text-xs text-white/50 font-mono break-all select-all">{CA}</code>
-          </div>
+            <code className="text-xs text-white/50 font-mono break-all group-hover:text-white/70 transition-colors">{CA}</code>
+            <span className={`text-[10px] uppercase tracking-wider font-semibold transition-colors ${copied ? 'text-green-400' : 'text-white/20 group-hover:text-eth-purple'}`}>
+              {copied ? 'Copied!' : 'Copy'}
+            </span>
+          </button>
         </div>
 
         {/* CTAs */}
