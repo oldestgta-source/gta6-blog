@@ -1,12 +1,16 @@
 import type { FeedItem } from '@/lib/feed';
 
 const sourceColors: Record<string, string> = {
-  'IGN': 'bg-red-500/20 text-red-400',
+  'Screen Rant': 'bg-red-500/20 text-red-400',
+  'Tech Times': 'bg-cyan-500/20 text-cyan-400',
+  'GAMINGbible': 'bg-orange-500/20 text-orange-400',
+  'WCCFTech': 'bg-blue-500/20 text-blue-400',
   'Insider Gaming': 'bg-purple-500/20 text-purple-400',
-  'GamesRadar+': 'bg-orange-500/20 text-orange-400',
   'GameSpot': 'bg-yellow-500/20 text-yellow-400',
-  'Kotaku': 'bg-green-500/20 text-green-400',
-  'PC Gamer': 'bg-blue-500/20 text-blue-400',
+  'Rockstar Newswire': 'bg-amber-500/20 text-amber-400',
+  'GTABase': 'bg-green-500/20 text-green-400',
+  'GrandTheft.gg': 'bg-pink-500/20 text-pink-400',
+  'The Hake': 'bg-teal-500/20 text-teal-400',
 };
 
 export default function FeedCard({ item }: { item: FeedItem }) {
