@@ -9,6 +9,9 @@ export default function Footer() {
           <Link href="/lucia-caminos" className="text-xs text-white/30 hover:text-accent-cyan transition-colors">
             Lucia Caminos
           </Link>
+          <Link href="/trailers" className="text-xs text-white/30 hover:text-accent-cyan transition-colors">
+            Trailers
+          </Link>
           <Link href="/leaks" className="text-xs text-white/30 hover:text-accent-cyan transition-colors">
             Leaks
           </Link>
