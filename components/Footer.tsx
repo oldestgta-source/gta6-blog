@@ -6,16 +6,16 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8">
         {/* Single row links */}
         <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 mb-6">
+          <Link href="/lucia-caminos" className="text-xs text-white/30 hover:text-accent-cyan transition-colors">
+            Lucia Caminos
+          </Link>
           <Link href="/leaks" className="text-xs text-white/30 hover:text-accent-cyan transition-colors">
             Leaks
           </Link>
           <Link href="/blogs" className="text-xs text-white/30 hover:text-accent-cyan transition-colors">
             Blogs
           </Link>
-          <Link href="/category/news" className="text-xs text-white/30 hover:text-accent-cyan transition-colors">
-            News
-          </Link>
-          <Link href="/category/guides" className="text-xs text-white/30 hover:text-accent-cyan transition-colors">
+<Link href="/category/guides" className="text-xs text-white/30 hover:text-accent-cyan transition-colors">
             Guides
           </Link>
           <a

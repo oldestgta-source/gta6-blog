@@ -4,9 +4,9 @@ import Link from 'next/link';
 import { useState, useEffect } from 'react';
 
 const navLinks = [
+  { name: 'Lucia Caminos', href: '/lucia-caminos' },
   { name: 'Leaks', href: '/leaks' },
   { name: 'Blogs', href: '/blogs' },
-  { name: 'News', href: '/category/news' },
   { name: 'Guides', href: '/category/guides' },
   { name: 'Deep Dives', href: '/category/deep-dive' },
   { name: 'Opinion', href: '/category/opinion' },

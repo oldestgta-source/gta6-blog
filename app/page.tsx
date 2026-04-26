@@ -1,4 +1,5 @@
 import HeroSection from '@/components/HeroSection';
+import LuciaShowcase from '@/components/LuciaShowcase';
 import IntelSection from '@/components/IntelSection';
 import ExploreMap from '@/components/ExploreMap';
 import ContentGrid from '@/components/ContentGrid';
@@ -12,6 +13,11 @@ export default function Home() {
 
       {/* Hero — full viewport with trailers */}
       <HeroSection />
+
+      {/* Lucia Showcase */}
+      <div className="fade-section">
+        <LuciaShowcase />
+      </div>
 
       {/* Latest Intel */}
       <div className="fade-section">
