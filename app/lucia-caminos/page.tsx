@@ -88,7 +88,7 @@ const artwork = [
 
 /* ── known details ──────────────────────────────────────── */
 
-const knownDetails = [
+const knownDetails: { label: string; value: string; link?: string; linkText?: string }[] = [
   {
     label: 'Full Name',
     value: 'Lucia Caminos',
@@ -127,7 +127,9 @@ const knownDetails = [
   },
   {
     label: 'Voice Actress',
-    value: 'Not yet officially revealed',
+    value: 'Rumored to be Manni L. Perez',
+    link: 'https://www.imdb.com/name/nm7398738/',
+    linkText: 'View on IMDb',
   },
 ];
 
@@ -234,7 +236,19 @@ export default function LuciaCaminosPage() {
                   <span className="text-xs uppercase tracking-wider text-eth-purple font-semibold min-w-[120px] sm:min-w-[140px] pt-0.5">
                     {detail.label}
                   </span>
-                  <span className="text-sm text-white/70">{detail.value}</span>
+                  <span className="text-sm text-white/70">
+                    {detail.value}
+                    {detail.link && (
+                      <a
+                        href={detail.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="ml-2 text-eth-purple hover:text-accent-pink transition-colors underline underline-offset-2"
+                      >
+                        {detail.linkText || 'Link'}
+                      </a>
+                    )}
+                  </span>
                 </div>
               ))}
             </div>
