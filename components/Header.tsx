@@ -10,7 +10,6 @@ const navLinks = [
   { name: 'Blogs', href: '/blogs' },
   { name: 'Guides', href: '/category/guides' },
   { name: 'Deep Dives', href: '/category/deep-dive' },
-  { name: 'Opinion', href: '/category/opinion' },
 ];
 
 export default function Header() {
