@@ -54,41 +54,6 @@ export default function HeroSection() {
         </div>
       </div>
 
-      {/* Trailer 2 */}
-      <div className="w-full bg-vice-abyss py-8 sm:py-12">
-        <div className="max-w-5xl mx-auto px-4">
-          <p className="text-xs uppercase tracking-[0.25em] text-white/30 text-center mb-4">
-            Official Trailer 2
-          </p>
-          <div className="relative w-full aspect-video rounded-lg overflow-hidden border border-white/5">
-            <iframe
-              src="https://www.youtube.com/embed/VQRLujxTm3c?rel=0&modestbranding=1&color=white"
-              title="Grand Theft Auto VI Trailer 2"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-              className="absolute inset-0 w-full h-full"
-            />
-          </div>
-        </div>
-      </div>
-
-      {/* Trailer 1 */}
-      <div className="w-full bg-vice-abyss py-8 sm:py-12">
-        <div className="max-w-5xl mx-auto px-4">
-          <p className="text-xs uppercase tracking-[0.25em] text-white/30 text-center mb-4">
-            Official Trailer 1
-          </p>
-          <div className="relative w-full aspect-video rounded-lg overflow-hidden border border-white/5">
-            <iframe
-              src="https://www.youtube.com/embed/QdBZY2fkU-0?rel=0&modestbranding=1&color=white"
-              title="Grand Theft Auto VI Trailer 1"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-              className="absolute inset-0 w-full h-full"
-            />
-          </div>
-        </div>
-      </div>
     </section>
   );
 }
