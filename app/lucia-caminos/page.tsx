@@ -1,4 +1,5 @@
 import { getPostsByCategory } from '@/lib/posts';
+import { proxyImg } from '@/lib/img';
 import PostCard from '@/components/PostCard';
 import Link from 'next/link';
 import type { Metadata } from 'next';
@@ -147,6 +148,7 @@ const rumoredDetails = [
 
 export default function LuciaCaminosPage() {
   const luciaPosts = getPostsByCategory('lucia-caminos');
+  const p = (src: string) => proxyImg(src);
 
   return (
     <div className="min-h-screen">
@@ -173,7 +175,7 @@ export default function LuciaCaminosPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="relative w-full aspect-video rounded-xl overflow-hidden border border-vice-border">
             <img
-              src={officialScreenshots[0].src}
+              src={p(officialScreenshots[0].src)}
               alt={officialScreenshots[0].alt}
               className="w-full h-full object-cover"
               loading="eager"
@@ -258,7 +260,7 @@ export default function LuciaCaminosPage() {
               className="group relative aspect-video rounded-lg overflow-hidden border border-vice-border hover:border-eth-purple/50 transition-all duration-300"
             >
               <img
-                src={img.src}
+                src={p(img.src)}
                 alt={img.alt}
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 loading="lazy"
@@ -292,7 +294,7 @@ export default function LuciaCaminosPage() {
               className="group relative aspect-video rounded-lg overflow-hidden border border-vice-border hover:border-accent-pink/50 transition-all duration-300"
             >
               <img
-                src={img.src}
+                src={p(img.src)}
                 alt={img.alt}
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 loading="lazy"
@@ -324,7 +326,7 @@ export default function LuciaCaminosPage() {
               className="group relative aspect-video rounded-lg overflow-hidden border border-vice-border hover:border-accent-pink/50 transition-all duration-300"
             >
               <img
-                src={img.src}
+                src={p(img.src)}
                 alt={img.alt}
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 loading="lazy"

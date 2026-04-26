@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { proxyImg } from '@/lib/img';
 
 const showcaseImages = [
   {
@@ -66,7 +67,7 @@ export default function LuciaShowcase() {
               }`}
             >
               <img
-                src={img.src}
+                src={proxyImg(img.src)}
                 alt={img.alt}
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 loading="lazy"
